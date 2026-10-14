@@ -1,0 +1,200 @@
+== measured constants: new vs small-coefficient tableaux
+  CRK5-opt/CRK5-s: geomean 0.616, better on 9/11, range 0.089..1.091 quadratic:0.84 exponential:0.46 nonautonomous:0.26 VanderPol:0.72 Rossler:1.00 Bouali:0.09 Lorenz05:0.98 Lorenz5:0.99 Kepler:0.75 RigidBody:0.96 Brusselator:1.09
+     -> evaluations at equal accuracy: factor 0.908
+  CRK6-opt/CRK6-s: geomean 0.481, better on 10/11, range 0.136..1.274 quadratic:0.45 exponential:0.14 nonautonomous:0.40 VanderPol:0.72 Rossler:0.40 Bouali:0.74 Lorenz05:0.79 Lorenz5:0.40 Kepler:1.27 RigidBody:0.55 Brusselator:0.28
+     -> evaluations at equal accuracy: factor 0.885
+  CRK6-opt/CCK6(5): geomean 1.104, better on 5/11, range 0.174..9.395 quadratic:8.08 exponential:0.23 nonautonomous:0.48 VanderPol:1.34 Rossler:1.74 Bouali:0.17 Lorenz05:3.06 Lorenz5:0.65 Kepler:0.22 RigidBody:9.39 Brusselator:2.03
+     -> evaluations at equal accuracy: factor 1.017
+== order 5: smallest constant among the complex tableaux
+  CRK5-opt: 7 ['quadratic', 'exponential', 'nonautonomous', 'VanderPol', 'Bouali', 'Lorenz05', 'RigidBody']
+  CRK5-s: 1 ['Rossler']
+  CRK5-2: 2 ['Lorenz5', 'Kepler']
+  CRK5-1: 1 ['Brusselator']
+== order 6: smallest constant among the complex tableaux
+  CCK6(5): 5 ['quadratic', 'Rossler', 'Lorenz05', 'RigidBody', 'Brusselator']
+  CRK6-opt: 2 ['exponential', 'Bouali']
+  CRK6-lam: 1 ['nonautonomous']
+  CRK6-0: 2 ['VanderPol', 'Kepler']
+  CCK6-casc: 1 ['Lorenz5']
+== order 5: CRK5-opt against the real methods at equal step
+  quadratic     CRK5-opt 3.039e-04  DP5 3.416211990402129e-05  CK5 8.674e-06
+  exponential   CRK5-opt 3.721e-03  DP5 9.408791238405528e-05  CK5 1.325e-04
+  nonautonomous CRK5-opt 1.076e-02  DP5 0.0023169576044390432  CK5 4.968e-02
+  VanderPol     CRK5-opt 8.363e-02  DP5 None  CK5 5.965e-02
+  Rossler       CRK5-opt 5.811e-02  DP5 0.011376021405411338  CK5 1.505e-02
+  Bouali        CRK5-opt 2.582e+01  DP5 None  CK5 4.706e+01
+  Lorenz05      CRK5-opt 4.850e+04  DP5 8591.530418251761  CK5 5.307e+03
+  Lorenz5       CRK5-opt 4.721e+06  DP5 882942.6993222235  CK5 5.773e+05
+  Kepler        CRK5-opt 4.832e+02  DP5 37.54655012927007  CK5 2.087e+01
+  RigidBody     CRK5-opt 1.597e-02  DP5 0.0025720944734561576  CK5 2.698e-03
+  Brusselator   CRK5-opt 1.283e+00  DP5 0.13421456328514736  CK5 2.363e-01
+== order 6: best complex vs real at equal step (all complex tableaux)
+  quadratic     best CCK6(5)    5.900e-06 | RK6 1.392e-05 DP6 2.039e-06 V6 1.403e-05 | CRK6-opt 4.769e-05  more acc. than: Butcher6
+  exponential   best CRK6-opt   4.328e-04 | RK6 2.926e-04 DP6 2.680e-05 V6 2.953e-04 | CRK6-opt 4.328e-04  more acc. than: Butcher6
+  nonautonomous best CRK6-lam   8.085e-04 | RK6 7.545e-03 DP6 6.297e-03 V6 1.801e-02 | CRK6-opt 4.318e-03  more acc. than: RK6-opt,DP6(5),Verner6(5),Butcher6
+  VanderPol     best CRK6-0     1.652e-02 | RK6 4.707e-02 DP6 4.553e-02 V6 8.786e-02 | CRK6-opt 1.050e-01  more acc. than: Butcher6
+  Rossler       best CCK6(5)    1.169e-02 | RK6 5.492e-03 DP6 1.489e-03 V6 5.697e-04 | CRK6-opt 2.029e-02  more acc. than: Butcher6
+  Bouali        best CRK6-opt   2.602e+02 | RK6 5.084e+02 DP6 9.401e+01 V6 6.403e+02 | CRK6-opt 2.602e+02  more acc. than: RK6-opt,Verner6(5),Butcher6
+  Lorenz05      best CCK6(5)    4.519e+04 | RK6 8.699e+03 DP6 2.491e+04 V6 7.175e+04 | CRK6-opt 1.382e+05  more acc. than: Butcher6
+  Lorenz5       best CCK6-casc  3.030e+05 | RK6 2.629e+05 DP6 2.953e+05 V6 4.598e+05 | CRK6-opt 3.960e+05  more acc. than: Verner6(5),Butcher6
+  Kepler        best CRK6-0     3.980e+01 | RK6 5.290e+01 DP6 1.212e+01 V6 1.290e+01 | CRK6-opt 6.767e+01  more acc. than: Butcher6
+  RigidBody     best CCK6(5)    2.281e-04 | RK6 1.492e-04 DP6 7.373e-04 V6 1.340e-03 | CRK6-opt 2.142e-03  more acc. than: Butcher6
+  Brusselator   best CCK6(5)    6.128e-01 | RK6 9.264e-03 DP6 4.253e-01 V6 5.131e-01 | CRK6-opt 1.245e+00  more acc. than: Butcher6
+== kappa* of CRK6-opt (>1 counts) and kappa_CPU comparison
+  CRK6-opt  vs RK6-opt   : >1 on 6/11, max 1.30, median 1.02
+  CRK6-opt  vs DP6(5)    : >1 on 8/11, max 1.42, median 1.11
+  CRK6-opt  vs Verner6(5): >1 on 10/11, max 1.69, median 1.23
+  CRK6-s    vs RK6-opt   : >1 on 3/11, max 1.24, median 0.83
+  CRK6-s    vs DP6(5)    : >1 on 6/11, max 1.22, median 1.01
+  CRK6-s    vs Verner6(5): >1 on 7/11, max 1.47, median 1.11
+  CCK6(5)   vs RK6-opt   : >1 on 6/11, max 1.35, median 1.02
+  CCK6(5)   vs DP6(5)    : >1 on 7/11, max 1.62, median 1.18
+  CCK6(5)   vs Verner6(5): >1 on 8/11, max 1.79, median 1.29
+  CRK5-opt  vs DP5       : >1 on 0/9, max 0.88, median 0.83
+  CRK5-opt  vs CK5       : >1 on 3/11, max 1.63, median 0.84
+  CRK5-s    vs DP5       : >1 on 0/9, max 0.87, median 0.78
+  CRK5-s    vs CK5       : >1 on 2/11, max 1.24, median 0.83
+  cases with kappa* > kappa_CPU:
+    CRK6-opt vs Verner6(5) on Bouali: 1.55 > 1.38
+    CRK6-opt vs Butcher6 on exponential: 2.41 > 2.08
+    CRK6-opt vs Butcher6 on VanderPol: 1.91 > 1.53
+    CRK6-opt vs Butcher6 on Rossler: 2.05 > 1.51
+    CRK6-opt vs Butcher6 on Bouali: 2.80 > 1.38
+    CRK6-opt vs Butcher6 on Lorenz05: 1.62 > 1.56
+    CRK6-opt vs Butcher6 on Lorenz5: 2.05 > 1.56
+    CRK6-opt vs Butcher6 on RigidBody: 1.78 > 1.53
+    CRK6-opt vs Butcher6 on Brusselator: 2.06 > 1.58
+    CRK6-s vs Verner6(5) on Bouali: 1.47 > 1.38
+    CRK6-s vs Butcher6 on VanderPol: 1.81 > 1.53
+    CRK6-s vs Butcher6 on Rossler: 1.76 > 1.51
+    CRK6-s vs Butcher6 on Bouali: 2.66 > 1.38
+    CRK6-s vs Butcher6 on Lorenz5: 1.76 > 1.56
+    CRK6-s vs Butcher6 on RigidBody: 1.61 > 1.53
+    CRK6-s vs Butcher6 on Brusselator: 1.66 > 1.58
+    CRK6-0 vs DP6(5) on VanderPol: 1.58 > 1.53
+    CRK6-0 vs Verner6(5) on VanderPol: 1.76 > 1.53
+    CRK6-0 vs Butcher6 on VanderPol: 2.59 > 1.53
+    CRK6-0 vs Butcher6 on Rossler: 1.91 > 1.51
+    CRK6-0 vs Butcher6 on Bouali: 1.65 > 1.38
+    CRK6-0 vs Butcher6 on Lorenz05: 1.73 > 1.56
+    CRK6-0 vs Butcher6 on Lorenz5: 1.76 > 1.56
+    CRK6-0 vs Butcher6 on RigidBody: 2.01 > 1.53
+    CRK6-0 vs Butcher6 on Brusselator: 1.88 > 1.58
+    CCK6(5) vs DP6(5) on RigidBody: 1.62 > 1.53
+    CCK6(5) vs Verner6(5) on RigidBody: 1.79 > 1.53
+    CCK6(5) vs Butcher6 on VanderPol: 2.00 > 1.53
+    CCK6(5) vs Butcher6 on Rossler: 2.25 > 1.51
+    CCK6(5) vs Butcher6 on Bouali: 2.09 > 1.38
+    CCK6(5) vs Butcher6 on Lorenz05: 1.95 > 1.56
+    CCK6(5) vs Butcher6 on Lorenz5: 1.91 > 1.56
+    CCK6(5) vs Butcher6 on RigidBody: 2.59 > 1.53
+    CCK6(5) vs Butcher6 on Brusselator: 2.32 > 1.58
+    CCK6-casc vs Butcher6 on VanderPol: 1.64 > 1.53
+    CCK6-casc vs Butcher6 on Rossler: 1.72 > 1.51
+    CCK6-casc vs Butcher6 on Bouali: 2.38 > 1.38
+    CCK6-casc vs Butcher6 on Lorenz05: 1.66 > 1.56
+    CCK6-casc vs Butcher6 on Lorenz5: 2.14 > 1.56
+    CCK6-casc vs Butcher6 on RigidBody: 2.20 > 1.53
+== variable step, eps 1e-06: best complex 6 pair vs better of DP6(5), Verner6(5)
+  exponential   CRK6(4)          43  DP6(5)           64  -33%
+  nonautonomous CCK6(5)         201  DP6(5)          297  -33%
+  VanderPol     CCK6(5)-s       166  DP6(5)          219  -24%
+  Rossler       CCK6(5)-s       167  DP6(5)          162  +3%
+  Bouali        CRK6(4)         416  DP6(5)          542  -23%
+  Lorenz5       CCK6(5)-s      2158  DP6(5)         2439  -12%
+  Kepler        CRK6(4)         866  DP6(5)         1459  -41%
+  RigidBody     CCK6-casc       241  DP6(5)          344  -30%
+  Brusselator   CCK6(5)         675  DP6(5)          826  -18%
+  Arenstorf     CRK6(4)        2346  Verner6(5)     4100  -43%
+   order 5: CRK5(4) vs better of DP5, CK5
+  exponential         62  CK5         34  +83%
+  nonautonomous      220  DP5        185  +19%
+  VanderPol          250  CK5        248  +1%
+  Rossler            249  CK5        208  +20%
+  Bouali             725  CK5        540  +34%
+  Lorenz5           4599  DP5       3711  +24%
+  Kepler            2287  DP5       1633  +40%
+  RigidBody          351  CK5        362  -3%
+  Brusselator        941  CK5        706  +33%
+  Arenstorf         7243  CK5       6052  +20%
+   pairs on the small-coefficient tableaux relative to the new pairs
+   CRK5-s(4)/CRK5(4): geomean 1.063 over 10, more expensive on 7, range 0.90..1.26
+   CRK6-s(4)/CRK6(4): geomean 1.155 over 10, more expensive on 6, range 0.89..1.77
+== variable step, eps 1e-08: best complex 6 pair vs better of DP6(5), Verner6(5)
+  exponential   CRK6(4)          86  DP6(5)          102  -16%
+  nonautonomous CCK6(5)-s       359  DP6(5)          596  -40%
+  VanderPol     CRK6(4)         318  DP6(5)          426  -25%
+  Rossler       CCK6(5)-s       341  DP6(5)          306  +11%
+  Bouali        CRK6(4)         707  Verner6(5)     1028  -31%
+  Lorenz5       CCK6(5)-s      4993  Verner6(5)     6532  -24%
+  Kepler        CRK6(4)        2085  DP6(5)         2341  -11%
+  RigidBody     CCK6(5)         413  DP6(5)          663  -38%
+  Brusselator   CCK6(5)        1453  DP6(5)         1521  -4%
+  Arenstorf     CRK6(4)        5099  Verner6(5)     8717  -42%
+   order 5: CRK5(4) vs better of DP5, CK5
+  exponential        126  CK5         42  +200%
+  nonautonomous      445  DP5        492  -9%
+  VanderPol          567  CK5        569  -0%
+  Rossler            611  CK5        486  +26%
+  Bouali            1846  CK5       1140  +62%
+  Lorenz5          11556  DP5      10362  +12%
+  Kepler            5728  DP5       4360  +31%
+  RigidBody          825  CK5        868  -5%
+  Brusselator       1988  CK5       1773  +12%
+  Arenstorf          inf  CK5      15246  +inf%
+   pairs on the small-coefficient tableaux relative to the new pairs
+   CRK5-s(4)/CRK5(4): geomean 1.080 over 9, more expensive on 4, range 0.94..1.38
+   CRK6-s(4)/CRK6(4): geomean 1.158 over 10, more expensive on 7, range 0.87..1.75
+== variable step, eps 1e-10: best complex 6 pair vs better of DP6(5), Verner6(5)
+  exponential   CRK6(4)         163  DP6(5)          187  -13%
+  nonautonomous CCK6-casc       580  DP6(5)         1110  -48%
+  VanderPol     CRK6(4)         554  DP6(5)          758  -27%
+  Rossler       CCK6(5)-s       708  DP6(5)          602  +18%
+  Bouali        CCK6(5)        2085  DP6(5)         2278  -8%
+  Lorenz5       CRK6(4)       10875  Verner6(5)    13511  -20%
+  Kepler        CRK6(4)        4898  DP6(5)         5206  -6%
+  RigidBody     CCK6(5)         860  DP6(5)         1349  -36%
+  Brusselator   CRK6(4)        2725  DP6(5)         3107  -12%
+  Arenstorf     CRK6(4)       10236  Verner6(5)    14484  -29%
+   order 5: CRK5(4) vs better of DP5, CK5
+  exponential        355  CK5        236  +51%
+  nonautonomous     1243  DP5        824  +51%
+  VanderPol         1351  DP5       1250  +8%
+  Rossler           1517  CK5       1184  +28%
+  Bouali            4670  CK5       2086  +124%
+  Lorenz5            inf  DP5      26562  +inf%
+  Kepler             inf  DP5      10781  +inf%
+  RigidBody         2016  CK5       2160  -7%
+  Brusselator       4497  CK5       4232  +6%
+  Arenstorf          inf  DP5        inf  +nan%
+   pairs on the small-coefficient tableaux relative to the new pairs
+   CRK5-s(4)/CRK5(4): geomean 1.024 over 7, more expensive on 3, range 0.88..1.24
+   CRK6-s(4)/CRK6(4): geomean 1.064 over 9, more expensive on 5, range 0.57..1.60
+== cross-order, variable step (best 6 pair / best 5(4) pair)
+  1e-06: exponential:1.26 nonautonomous:1.08 VanderPol:0.67 Rossler:0.78 Bouali:0.77 Lorenz5:0.58 Kepler:0.53 RigidBody:0.69 Brusselator:0.96 Arenstorf:0.39
+  1e-08: exponential:2.04 nonautonomous:0.81 VanderPol:0.56 Rossler:0.63 Bouali:0.62 Lorenz5:0.48 Kepler:0.48 RigidBody:0.50 Brusselator:0.82 Arenstorf:0.33
+  1e-10: exponential:0.69 nonautonomous:0.70 VanderPol:0.44 Rossler:0.51 Bouali:1.00 Lorenz5:0.41 Kepler:0.45 RigidBody:0.43 Brusselator:0.64 Arenstorf:-
+== cross-order, fixed step, eps 1e-8, kappa=1: best main complex order-6 / best order-5 (all)
+  quadratic     CRK6-opt       125  CK5             95  ratio 1.32
+  exponential   CCK6(5)        187  CK5            110  ratio 1.70
+  nonautonomous CCK6(5)        266  DP5            289  ratio 0.92
+  VanderPol     CRK6-opt       436  CRK5-opt       614  ratio 0.71
+  Rossler       CRK6-opt       336  CK5            535  ratio 0.63
+  Bouali        CRK6-opt      1661  CRK5-opt      1869  ratio 0.89
+  Lorenz05      CCK6(5)        400  CK5            666  ratio 0.60
+  Lorenz5       CCK6(5)       4607  CRK5-2       11786  ratio 0.39
+  Kepler        CRK6-opt      5333  CK5           8743  ratio 0.61
+  RigidBody     CCK6-casc      383  CK5            873  ratio 0.44
+  Brusselator   CRK6-opt      2705  CRK5-1        2854  ratio 0.95
+== cost ratio table (best main complex / best real, 1e-8)
+  fixed    order 5 kappa1: <1 on 2/9  saving 13-24%  VanderPol:0.87 Bouali:0.76
+  fixed    order 5 cpu   : <1 on 0/9  
+  fixed    order 6 kappa1: <1 on 4/9  saving 3-21%  nonautonomous:0.90 VanderPol:0.97 Lorenz5:0.79 RigidBody:0.94
+  fixed    order 6 cpu   : <1 on 0/9  
+  adaptive order 5 kappa1: <1 on 3/9  saving 0-9%  nonautonomous:0.91 VanderPol:1.00 RigidBody:0.95
+  adaptive order 5 cpu   : <1 on 0/9  
+  adaptive order 6 kappa1: <1 on 9/10  saving 4-42%  exponential:0.84 nonautonomous:0.62 VanderPol:0.75 Bouali:0.69 Lorenz5:0.80 Kepler:0.89 RigidBody:0.62 Brusselator:0.96 Arenstorf:0.58
+  adaptive order 6 cpu   : <1 on 2/10  saving 1-4%  Bouali:0.99 RigidBody:0.96
+== summary table problem sets
+ order 5 {'fix1': 11, 'fixcpu': 11, 'ad1': 9, 'adcpu': 9} ['exponential', 'nonautonomous', 'VanderPol', 'Rossler', 'Bouali', 'Lorenz5', 'Kepler', 'RigidBody', 'Brusselator']
+ order 6 {'fix1': 11, 'fixcpu': 11, 'ad1': 10, 'adcpu': 10} ['exponential', 'nonautonomous', 'VanderPol', 'Rossler', 'Bouali', 'Lorenz5', 'Kepler', 'RigidBody', 'Brusselator', 'Arenstorf']

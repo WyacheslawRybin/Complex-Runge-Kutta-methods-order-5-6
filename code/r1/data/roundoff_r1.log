@@ -1,0 +1,30 @@
+CRK5-opt    residual of the order conditions with double coefficients: 5.6e-17
+CRK5-s      residual of the order conditions with double coefficients: 4.6e-17
+CRK6-opt    residual of the order conditions with double coefficients: 8.2e-17
+CRK6-s      residual of the order conditions with double coefficients: 2.8e-17
+CCK6(5)     residual of the order conditions with double coefficients: 3.2e-17
+CCK6(5)-s   residual of the order conditions with double coefficients: 4.3e-17
+CCK6-casc   residual of the order conditions with double coefficients: 8.3e-17
+DP5         residual of the order conditions with double coefficients: 8.3e-16
+CK5         residual of the order conditions with double coefficients: 3.2e-17
+Tsit5(4)    residual of the order conditions with double coefficients: 1.0e-14
+BS5(4)      residual of the order conditions with double coefficients: 3.8e-17
+Butcher6    residual of the order conditions with double coefficients: 5.6e-17
+RK6-opt     residual of the order conditions with double coefficients: 2.8e-17
+DP6(5)      residual of the order conditions with double coefficients: 6.2e-17
+Verner6(5)  residual of the order conditions with double coefficients: 8.7e-16
+Vern6(5)    residual of the order conditions with double coefficients: 3.3e-11
+Vern6(5), rounded coefficients: largest defect of order 1: 1.37e-14
+Vern6(5), rounded coefficients: largest defect of order 2: 6.51e-12
+Vern6(5), rounded coefficients: largest defect of order 3: 1.30e-11
+Vern6(5), rounded coefficients: largest defect of order 4: 1.96e-11
+Vern6(5), rounded coefficients: largest defect of order 5: 2.61e-11
+Vern6(5), rounded coefficients: largest defect of order 6: 3.26e-11
+Kepler, Vern6(5), N = 8000: error 5.70e-11 with double coefficients
+Kepler, Vern6(5), N = 16000: error 2.83e-11 with double coefficients
+Kepler, Vern6(5), N = 1000: error 1.19e-10 with double coefficients, 5.72e-10 with exact ones
+Kepler, Vern6(5), N = 2000: error 2.23e-10 with double coefficients, 4.60e-12 with exact ones
+Kepler, Vern6(5), N = 4000: error 1.14e-10 with double coefficients, 3.68e-14 with exact ones
+Kepler, DP6(5), N = 1000: error 3.29e-10 with double coefficients, 3.29e-10 with exact ones
+Kepler, DP6(5), N = 2000: error 6.47e-12 with double coefficients, 6.47e-12 with exact ones
+Kepler, DP6(5), N = 4000: error 1.43e-13 with double coefficients, 1.43e-13 with exact ones

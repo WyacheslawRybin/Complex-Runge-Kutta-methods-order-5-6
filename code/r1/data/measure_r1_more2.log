@@ -1,0 +1,5 @@
+k=9: []
+k=10: []
+k=11: [('Vern6(5)', 'Lorenz5'), ('Vern6(5)', 'Kepler')]
+[   272s] Vern6(5)  Lorenz5        N= 409600 Ch=1.17841e+03 C=7.2968e+02 conv=4.1e-02 order=6.47 approx
+[   385s] Vern6(5)  Kepler         N= 409600 Ch=1.08928e-01 C=8.7425e-02 conv=6.9e-03 order=6.26 ok

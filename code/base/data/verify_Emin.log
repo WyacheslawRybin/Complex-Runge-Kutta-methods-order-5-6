@@ -1,0 +1,9 @@
+== CRK5: best local minima found
+  CRK5-E       bound   100 start CRK5-1+rand4       it  577 E(double) 1.389261e-03  E(mp) 0.0013892605  max|coef| 99.99  refine shift 7.9e-15  resid 8.7e-55  c = ['(0.0 + 0.0j)', '(0.001955 - 0.03177j)', '(0.01284 - 0.04687j)', '(0.05385 - 0.05888j)', '(0.8341 - 2.789e-6j)']
+  CRK5-E5      bound     5 start GJM5+rand9         it    0 E(double) 1.393492e-03  E(mp) 0.0013934923  max|coef| 2.03456  refine shift 2.3e-15  resid 1.2e-56  c = ['(0.0 + 0.0j)', '(-0.003952 + 0.2825j)', '(0.2404 + 0.2165j)', '(0.4863 + 0.1545j)', '(0.722 + 0.09273j)']
+== CRK6: best local minima found
+  CRK6-E       bound   100 start CRK6-opt+rand7     it  137 E(double) 3.235204e-04  E(mp) 0.00032352042  max|coef| 31.9977  refine shift 2.1e-13  resid 1.4e-60  c = ['(0.0 + 0.0j)', '(0.2299 + 0.0002624j)', '(0.4553 + 0.01956j)', '(0.4493 - 0.03995j)', '(0.7103 - 0.003524j)', '(1.0 + 4.057e-62j)']
+  CRK6-E5      bound     5 start CRK6-0+rand10      it  353 E(double) 3.337168e-04  E(mp) 0.00033371685  max|coef| 4.9995  refine shift 1.9e-13  resid 7.8e-62  c = ['(0.0 + 0.0j)', '(0.2175 + 0.0004882j)', '(0.3684 + 0.0206j)', '(0.5639 + 0.02741j)', '(0.756 - 0.02835j)', '(1.0 - 4.011e-62j)']
+== CCK65: best local minima found
+  CCK6(5)-E    bound   100 start CCK6(5)+rand5      it    8 E(double) 3.943110e-04  E(mp) 0.00039431097  max|coef| 99.99  refine shift 2.1e-13  resid 7.8e-62  c = ['(0.0 + 0.0j)', '(0.1954 + 0.0006746j)', '(0.3403 + 0.001175j)', '(0.591 - 0.0028j)', '(0.795 - 0.0003844j)', '(0.8822 + 2.82e-61j)']
+  CCK6(5)-E5   bound     5 start CCK6(5)            it    0 E(double) 7.002886e-04  E(mp) 0.00070028862  max|coef| 2.26811  refine shift 9.7e-14  resid 3.9e-62  c = ['(0.0 + 0.0j)', '(0.2267 + 0.02856j)', '(0.4341 + 0.0547j)', '(0.6616 + 0.1452j)', '(0.8429 - 0.02326j)', '(0.9659 - 1.75e-61j)']

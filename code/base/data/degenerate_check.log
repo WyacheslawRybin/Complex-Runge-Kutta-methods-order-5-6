@@ -1,0 +1,44 @@
+11 tasks
+== CRK5 CRK5-opt+rand10
+   it      0  E 1.3965477e-03  max|coef|    100.000  gap 1.570e-01  |grad| 5.76e-13  resid 4.5e-16
+   it      1  E 1.3965477e-03  max|coef|    100.000  gap 1.570e-01  |grad| 3.91e-14  resid 2.7e-16  converged
+== CRK6 CRK6-opt+rand6
+   it      0  E 3.2719792e-04  max|coef|     35.644  gap 3.372e-02  |grad| 2.42e-13  resid 2.7e-15
+   it      3  E 3.2719792e-04  max|coef|     35.644  gap 3.372e-02  |grad| 1.74e-13  resid 3.4e-15  converged
+== CCK65 CCK6(5)+rand7
+   it      0  E 4.9269053e-04  max|coef|      8.808  gap 6.357e-02  |grad| 4.93e-12  resid 8.6e-16
+   it     16  E 4.9269053e-04  max|coef|      8.809  gap 6.356e-02  |grad| 8.45e-13  resid 6.1e-16  converged
+== CCK65 CCK6(5)+rand4
+   it      0  E 4.4407144e-04  max|coef|    100.000  gap 1.434e-01  |grad| 9.73e-11  resid 9.2e-16
+   it    147  E 3.9345331e-04  max|coef|     19.086  gap 1.277e-01  |grad| 2.24e-13  resid 4.2e-16  converged
+== CCK65 CCK6(5)+rand5
+   it      0  E 3.9431087e-04  max|coef|    100.000  gap 8.720e-02  |grad| 5.27e-12  resid 3.0e-16
+   it    165  E 3.9334464e-04  max|coef| 114736.245  gap 8.589e-02  |grad| 7.58e-09  resid 4.3e-16  converged
+== CRK6 CRK6-opt+rand7
+   it      0  E 3.2352044e-04  max|coef|     31.807  gap 5.998e-02  |grad| 1.68e-11  resid 3.7e-15
+   it    138  E 3.2352042e-04  max|coef|     31.998  gap 5.981e-02  |grad| 7.90e-13  resid 3.1e-15  converged
+== CRK6 CRK6-opt
+   it      0  E 3.3087760e-04  max|coef|     19.019  gap 5.373e-02  |grad| 5.94e-11  resid 2.9e-15
+   it    555  E 3.3076363e-04  max|coef|    102.535  gap 5.084e-02  |grad| 1.42e-12  resid 1.0e-15  converged
+== CRK5 CRK5-1+rand4
+   it      0  E 1.3895330e-03  max|coef|     25.652  gap 3.129e-02  |grad| 2.53e-09  resid 5.6e-14
+   it   1000  E 1.3891474e-03  max|coef|    196.877  gap 1.641e-02  |grad| 5.85e-10  resid 1.4e-12
+   it   1411  E 1.3890178e-03  max|coef|    649.557  gap 1.223e-02  |grad| 1.08e-13  resid 7.7e-12  converged
+== CRK6 CRK6-opt+rand9
+   it      0  E 3.3084926e-04  max|coef|     22.046  gap 5.319e-02  |grad| 4.92e-11  resid 4.0e-15
+   it   1000  E 3.3076333e-04  max|coef|    106.138  gap 5.087e-02  |grad| 1.50e-12  resid 2.5e-15
+   it   1078  E 3.3076135e-04  max|coef|    146.388  gap 5.082e-02  |grad| 7.86e-13  resid 4.8e-15  converged
+== CRK5 CRK5-2+rand5
+   it      0  E 1.4474818e-03  max|coef|     34.453  gap 1.022e-01  |grad| 1.33e-09  resid 3.3e-16
+   it   1000  E 1.4474542e-03  max|coef|     52.851  gap 1.019e-01  |grad| 4.03e-10  resid 7.9e-15
+   it   2000  E 1.4474461e-03  max|coef|     68.077  gap 1.018e-01  |grad| 3.78e-10  resid 2.0e-16
+   it   3000  E 1.4474431e-03  max|coef|     78.353  gap 1.017e-01  |grad| 3.70e-10  resid 4.6e-16
+   it   4000  E 1.4474413e-03  max|coef|     87.103  gap 1.017e-01  |grad| 1.56e-10  resid 1.1e-16
+   it   4385  E 1.4474407e-03  max|coef|     90.869  gap 1.017e-01  |grad| 4.05e-10  resid 1.6e-15  converged
+== CRK5 GJM5+rand1
+   it      0  E 1.3978864e-03  max|coef|     24.913  gap 1.172e-01  |grad| 1.82e-09  resid 5.0e-16
+   it   1000  E 1.3978512e-03  max|coef|     44.121  gap 1.175e-01  |grad| 5.44e-10  resid 7.8e-16
+   it   2000  E 1.3978448e-03  max|coef|     57.063  gap 1.175e-01  |grad| 3.65e-10  resid 3.8e-15
+   it   3000  E 1.3978419e-03  max|coef|     68.355  gap 1.176e-01  |grad| 1.43e-10  resid 6.3e-16
+   it   4000  E 1.3978406e-03  max|coef|     76.865  gap 1.176e-01  |grad| 2.44e-10  resid 9.2e-16
+   it   4986  E 1.3978397e-03  max|coef|     84.304  gap 1.176e-01  |grad| 2.90e-10  resid 1.8e-15  converged

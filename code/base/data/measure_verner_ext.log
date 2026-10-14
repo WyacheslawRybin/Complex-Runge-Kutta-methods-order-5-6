@@ -1,0 +1,4 @@
+3 cells to extend: [('Verner6(5)', 'exponential'), ('Verner6(5)', 'Brusselator'), ('Verner6(5)', 'Kepler')]
+[     6s] Verner6(5)   exponential    2.7532e-04 2.8576e-04 2.9060e-04 2.9293e-04
+[    22s] Verner6(5)   Brusselator    4.9459e-01 5.1141e-01 5.1377e-01 5.1346e-01
+[    67s] Verner6(5)   Kepler         1.5337e+01 1.4006e+01 1.3428e+01 1.3165e+01

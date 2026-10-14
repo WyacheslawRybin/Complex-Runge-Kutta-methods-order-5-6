@@ -1,0 +1,30 @@
+k=9: [('Tsit5(4)', 'Rossler'), ('BS5(4)', 'Bouali'), ('Vern6(5)', 'Lorenz5'), ('Vern6(5)', 'Kepler'), ('Vern6(5)', 'Brusselator'), ('Vern6(5)', 'exponential'), ('Vern6(5)', 'Bouali'), ('Vern6(5)', 'nonautonomous'), ('Vern6(5)', 'RigidBody'), ('Vern6(5)', 'Lorenz05')]
+[    28s] Vern6(5)  exponential    N=  20480 Ch=8.09468e-07 C=7.4972e-07 conv=1.5e-02 order=6.10 approx
+[    29s] Tsit5(4)  Rossler        N=  20480 Ch=1.16320e-03 C=1.1600e-03 conv=4.1e-03 order=5.00 ok
+[    62s] Vern6(5)  nonautonomous  N=  20480 Ch=9.30004e-07 C=-1.0384e-05 conv=8.7e-04 order=9.72 deg
+[    74s] Vern6(5)  Brusselator    N=  51200 Ch=1.39926e-03 C=8.8922e-04 conv=2.7e-01 order=6.45 deg
+[    84s] BS5(4)    Bouali         N=  51200 Ch=1.30568e-01 C=1.0820e-01 conv=3.5e-03 order=5.23 ok
+[    88s] Vern6(5)  Lorenz05       N=  10240 Ch=2.21433e+02 C=2.1505e+02 conv=1.0e-02 order=6.04 approx
+[    97s] Vern6(5)  RigidBody      N=  20480 Ch=1.47879e-06 C=1.8682e-06 conv=4.0e-01 order=5.56 deg
+[   149s] Vern6(5)  Bouali         N=  51200 Ch=7.67501e-01 C=4.3382e-01 conv=3.5e-02 order=6.52 deg
+[   158s] Vern6(5)  Lorenz5        N= 102400 Ch=2.55466e+03 C=-1.0746e+04 conv=1.1e+00 order=20.63 deg
+[   230s] Vern6(5)  Kepler         N= 102400 Ch=1.74038e-01 C=8.5834e-02 conv=1.3e-02 order=6.59 deg
+k=10: [('Vern6(5)', 'Lorenz5'), ('Vern6(5)', 'Kepler'), ('Vern6(5)', 'Brusselator'), ('Vern6(5)', 'exponential'), ('Vern6(5)', 'Bouali'), ('Vern6(5)', 'nonautonomous'), ('Vern6(5)', 'RigidBody'), ('Vern6(5)', 'Lorenz05')]
+[   255s] Vern6(5)  exponential    N=  40960 Ch=7.78157e-07 C=7.4685e-07 conv=3.8e-03 order=6.06 ok
+[   273s] Vern6(5)  nonautonomous  N=  40960 Ch=4.72605e-06 C=8.5221e-06 conv=2.2e+00 order=3.65 deg
+[   299s] Vern6(5)  Lorenz05       N=  20480 Ch=2.18548e+02 C=2.1566e+02 conv=2.9e-03 order=6.02 ok
+[   302s] Vern6(5)  RigidBody      N=  40960 Ch=1.71199e-06 C=1.9452e-06 conv=4.0e-02 order=5.79 approx
+[   329s] Vern6(5)  Brusselator    N= 102400 Ch=1.11389e-03 C=8.2851e-04 conv=7.3e-02 order=6.33 approx
+[   360s] Vern6(5)  Bouali         N= 102400 Ch=6.02585e-01 C=4.3767e-01 conv=8.8e-03 order=6.35 ok
+[   448s] Vern6(5)  Lorenz5        N= 204800 Ch=1.62714e+03 C=6.9962e+02 conv=1.6e+01 order=6.65 deg
+[   525s] Vern6(5)  Kepler         N= 204800 Ch=1.30430e-01 C=8.6822e-02 conv=1.1e-02 order=6.42 approx
+k=11: [('Vern6(5)', 'Lorenz5'), ('Vern6(5)', 'Kepler'), ('Vern6(5)', 'Brusselator'), ('Vern6(5)', 'nonautonomous'), ('Vern6(5)', 'RigidBody')]
+[   600s] Vern6(5)  nonautonomous  N=  81920 Ch=7.55379e-06 C=1.0382e-05 conv=1.8e-01 order=5.32 deg
+[   615s] Vern6(5)  RigidBody      N=  81920 Ch=1.83412e-06 C=1.9563e-06 conv=5.7e-03 order=5.90 ok
+[   702s] Vern6(5)  Brusselator    N= 204800 Ch=9.63623e-04 C=8.1336e-04 conv=1.9e-02 order=6.21 approx
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Vyacheslav\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Vyacheslav\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122, in spawn_main

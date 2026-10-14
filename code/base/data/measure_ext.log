@@ -1,0 +1,19 @@
+18 cells to extend: [('DP5', 'Bouali'), ('DP5', 'Brusselator'), ('DP5', 'exponential'), ('DP5', 'VanderPol'), ('CCK6(5)/5', 'Bouali'), ('CRK6-0', 'Kepler'), ('CRK6-lam', 'Lorenz5'), ('CRK6-lam', 'nonautonomous'), ('CCK6(5)', 'Brusselator'), ('CCK6(5)', 'RigidBody'), ('CCK6(5)', 'quadratic'), ('CCK6(5)-s', 'Kepler'), ('CCK6-casc', 'Lorenz5'), ('RK6-opt', 'Brusselator'), ('RK6-opt', 'pendulum'), ('DP6(5)', 'Dahlquist'), ('DP6(5)', 'pendulum'), ('RK4', 'Lorenz5')]
+[     6s] CCK6(5)      quadratic      8.7203e-06 7.2968e-06 6.5959e-06 6.2482e-06
+[     8s] DP5          exponential    1.8178e-04 1.3726e-04 1.1554e-04 1.0481e-04
+[    11s] DP5          VanderPol      8.8626e-03 4.8232e-03 3.2711e-03 2.8513e-03
+[    22s] CRK6-lam     nonautonomous  1.3756e-04 4.7292e-04 6.4069e-04 7.2460e-04
+[    26s] RK6-opt      pendulum       5.3693e-06 5.3040e-06 5.2875e-06 5.2834e-06
+[    29s] CCK6(5)      RigidBody      1.7882e-04 2.0203e-04 2.1481e-04 2.2143e-04
+[    29s] DP6(5)       Dahlquist      6.5733e-09 3.2753e-09 1.6348e-09 8.1668e-10
+[    30s] DP5          Brusselator    3.6187e-01 2.4605e-01 1.8974e-01 1.6198e-01
+[    33s] DP6(5)       pendulum       9.6881e-07 4.8441e-07 2.4220e-07 1.2110e-07
+[    39s] DP5          Bouali         3.8060e+01 1.4713e+01 2.9074e+00 3.0303e+00
+[    40s] RK6-opt      Brusselator    2.2818e-02 1.5987e-02 1.2615e-02 1.0939e-02
+[    52s] CCK6(5)      Brusselator    1.6630e-01 3.9150e-01 5.0267e-01 5.5775e-01
+[    54s] CCK6(5)/5    Bouali         3.5346e+00 7.9636e+00 1.0166e+01 1.1264e+01
+[    55s] RK4          Lorenz5        3.7632e+04 4.1275e+04 4.3541e+04 4.4767e+04
+[   111s] CRK6-lam     Lorenz5        5.9990e+05 6.9546e+05 7.4603e+05 7.7185e+05
+[   113s] CCK6-casc    Lorenz5        3.7950e+05 3.3959e+05 3.2093e+05 3.1199e+05
+[   148s] CRK6-0       Kepler         5.0572e+01 4.4376e+01 4.1897e+01 4.0847e+01
+[   151s] CCK6(5)-s    Kepler         4.4183e+01 4.8678e+01 5.1004e+01 5.2184e+01

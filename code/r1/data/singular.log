@@ -1,0 +1,19 @@
+Kepler    CRK5(4)    rho_max over tol: 0.414 (tol 1e-3: 0.414, tol 1e-6: 0.085, tol 1e-13: 0.003); failed: 0
+Kepler    CRK6(4)    rho_max over tol: 0.390 (tol 1e-3: 0.390, tol 1e-6: 0.048, tol 1e-13: 0.004); failed: 0
+Kepler    CCK6(5)    rho_max over tol: 0.186 (tol 1e-3: 0.186, tol 1e-6: 0.040, tol 1e-13: 0.003); failed: 0
+Kepler    CCK6(5)-s  rho_max over tol: 0.728 (tol 1e-3: 0.728, tol 1e-6: 0.122, tol 1e-13: 0.008); failed: 0
+Kepler    CCK6-casc  rho_max over tol: 0.691 (tol 1e-3: 0.691, tol 1e-6: 0.100, tol 1e-13: 0.007); failed: 0
+Arenstorf CRK5(4)    rho_max over tol: 0.315 (tol 1e-3: 0.315, tol 1e-6: 0.238, tol 1e-13: 0.056); failed: 0
+Arenstorf CRK6(4)    rho_max over tol: 1.575 (tol 1e-3: 0.537, tol 1e-6: 0.133, tol 1e-13: 0.092); failed: 0
+Arenstorf CCK6(5)    rho_max over tol: 0.323 (tol 1e-3: 0.306, tol 1e-6: 0.098, tol 1e-13: 0.077); failed: 0
+Arenstorf CCK6(5)-s  rho_max over tol: 0.790 (tol 1e-3: 0.502, tol 1e-6: 0.244, tol 1e-13: 0.184); failed: 0
+Arenstorf CCK6-casc  rho_max over tol: 1.480 (tol 1e-3: 0.768, tol 1e-6: 0.222, tol 1e-13: 0.156); failed: 0
+fixed Kepler CRK5(4)  N=  50: rho_max=0.391
+fixed Kepler CRK5(4)  N= 100: rho_max=0.196
+fixed Kepler CRK5(4)  N= 200: rho_max=0.098
+fixed Kepler CRK6(4)  N=  50: rho_max=0.224
+fixed Kepler CRK6(4)  N= 100: rho_max=0.113
+fixed Kepler CRK6(4)  N= 200: rho_max=0.057
+fixed Kepler CCK6(5)  N=  50: rho_max=0.214
+fixed Kepler CCK6(5)  N= 100: rho_max=0.085
+fixed Kepler CCK6(5)  N= 200: rho_max=0.051

@@ -1,0 +1,53 @@
+levels (stages, order): [(5, 5)]   real unknowns: 29   conditions: 17
+start: residual of the order conditions = 1.46e-16
+after Newton                            = 1.46e-16
+errors of the starting tableau at N = (50, 100, 200) : 6.811e-07 1.967e-08 5.901e-10   E_{p+1} = 1.5736e-03   max|coef| = 0.500
+  round  1  relative error = 0.9918  dim tangent = 12  max|coef| = 0.500  step = 3.2e-03
+  round  2  relative error = 0.9785  dim tangent = 12  max|coef| = 0.500  step = 5.1e-03
+  round  3  relative error = 0.9581  dim tangent = 12  max|coef| = 0.500  step = 8.2e-03
+  round  4  relative error = 0.9278  dim tangent = 12  max|coef| = 0.500  step = 1.3e-02
+  round  5  relative error = 0.8831  dim tangent = 12  max|coef| = 0.499  step = 2.1e-02
+  round  6  relative error = 0.8170  dim tangent = 12  max|coef| = 0.499  step = 3.4e-02
+  round  7  relative error = 0.7193  dim tangent = 12  max|coef| = 0.497  step = 5.4e-02
+  round  8  relative error = 0.5774  dim tangent = 12  max|coef| = 0.493  step = 8.6e-02
+  round  9  relative error = 0.3941  dim tangent = 12  max|coef| = 0.484  step = 1.4e-01
+  round 10  relative error = 0.3431  dim tangent = 12  max|coef| = 0.490  step = 1.1e-01
+  round 11  relative error = 0.3418  dim tangent = 12  max|coef| = 0.500  step = 8.8e-02
+  round 12  relative error = 0.3417  dim tangent = 12  max|coef| = 0.538  step = 1.4e-01
+  round 13  relative error = 0.3381  dim tangent = 12  max|coef| = 0.536  step = 2.3e-01
+  round 14  relative error = 0.2926  dim tangent = 12  max|coef| = 0.592  step = 1.8e-01
+  round 15  relative error = 0.2770  dim tangent = 12  max|coef| = 0.573  step = 1.4e-01
+  round 16  relative error = 0.2486  dim tangent = 12  max|coef| = 0.610  step = 1.2e-01
+  round 17  relative error = 0.2275  dim tangent = 12  max|coef| = 0.603  step = 9.2e-02
+  round 18  relative error = 0.2065  dim tangent = 12  max|coef| = 0.628  step = 7.4e-02
+  round 19  relative error = 0.1970  dim tangent = 12  max|coef| = 0.626  step = 1.2e-01
+  round 20  relative error = 0.1668  dim tangent = 12  max|coef| = 0.654  step = 9.4e-02
+  round 21  relative error = 0.1506  dim tangent = 12  max|coef| = 0.646  step = 7.6e-02
+  round 22  relative error = 0.1324  dim tangent = 12  max|coef| = 0.664  step = 6.0e-02
+  round 23  relative error = 0.1171  dim tangent = 12  max|coef| = 0.661  step = 4.8e-02
+  round 24  relative error = 0.1129  dim tangent = 12  max|coef| = 0.684  step = 7.7e-02
+  round 25  relative error = 0.0880  dim tangent = 12  max|coef| = 0.675  step = 6.2e-02
+
+tuned tableau, errors at N = (50, 100, 200) : 3.975e-08 1.826e-09 7.409e-11
+improvement factors: 17.13 10.77 7.96
+E_{p+1} = 3.4396e-03 (start 1.5736e-03),  max|coef| = 0.675
+  level (5 stages, order 5): max residual 1.4e-16
+
+tuned coefficients:
+  a21 = +0.314075511512471206 +0.027979545347577670j
+  a31 = -0.132950195648618374 +0.051945993384235341j
+  a32 = +0.508336946147512569 -0.090044692725859229j
+  a41 = -0.150246648905438263 -0.091908113572472333j
+  a42 = +0.189720662837475851 -0.029279984436720898j
+  a43 = +0.673937546013215094 +0.031895458174883505j
+  a51 = +0.105837220305370058 -0.008756439039937993j
+  a52 = +0.345858511839032878 -0.132509038274508967j
+  a53 = +0.201470004846941053 -0.155559007616163592j
+  a54 = +0.206189056995723236 +0.229705493731782867j
+  w1^(5) = +0.108362996140691337 +0.000000000000000000j
+  w2^(5) = +0.302237493235953281 -0.201975952716862223j
+  w3^(5) = +0.125845878415138529 -0.296549111031150225j
+  w4^(5) = +0.033046363656899079 -0.393240655600598732j
+  w5^(5) = +0.430507268551317823 +0.075388837947469214j
+
+saved to tuned_CRK5.npy

@@ -1,0 +1,13 @@
+CCK6(5) {'Im_c6': '5.0e-47', 'c6': '9.7e-01', 'resid_b_theta_d': '1.0e-45', 'max_d': '5.1e-02', 'rank_M5_six_stages': 10, 'smallest_sv': [0.0022439848109069823, 4.7120763317826634e-48], 'max_diff_bhat_b5': '1.3e-44', 'diff_Re_bhat1': '2.7e-45', 'bhat6': '0.0e+00'}
+CCK6(5)-s {'Im_c6': '5.0e-46', 'c6': '4.4e-01', 'resid_b_theta_d': '1.3e-45', 'max_d': '2.6e-01', 'rank_M5_six_stages': 10, 'smallest_sv': [0.003999345306474348, 7.931021094874735e-47], 'max_diff_bhat_b5': '7.0e-46', 'diff_Re_bhat1': '5.5e-46', 'bhat6': '0.0e+00'}
+CCK6-casc {'Im_c6': '5.0e-46', 'c6': '9.0e-01', 'resid_b_theta_d': '9.7e-46', 'max_d': '9.5e-02', 'rank_M5_six_stages': 10, 'smallest_sv': [0.002008584251546099, 7.410458160220304e-47], 'max_diff_bhat_b5': '9.0e-45', 'diff_Re_bhat1': '1.0e-44', 'bhat6': '0.0e+00'}
+CRK6-opt {'Im_c6': '1.0e-45', 'c6': '1.0e+00', 'resid_b_theta_d': '2.8e-45', 'max_d': '1.9e-45', 'rank_M5_six_stages': 11, 'smallest_sv': [0.0003974031749960908, 9.547953769505646e-05]}
+CRK6-s {'Im_c6': '3.0e-46', 'c6': '1.0e+00', 'resid_b_theta_d': '7.0e-46', 'max_d': '4.2e-46', 'rank_M5_six_stages': 11, 'smallest_sv': [0.003595235979011101, 0.0005741421953148734]}
+CRK6-0 {'Im_c6': '5.0e-46', 'c6': '1.0e+00', 'resid_b_theta_d': '4.8e-45', 'max_d': '2.1e-45', 'rank_M5_six_stages': 11, 'smallest_sv': [0.00021973940848701948, 2.4960428134452737e-05]}
+CRK6-lam {'Im_c6': '3.0e-46', 'c6': '1.0e+00', 'resid_b_theta_d': '1.0e-45', 'max_d': '1.6e-01', 'rank_M5_six_stages': 10, 'smallest_sv': [0.003038648723402213, 3.792791280189251e-62]}
+rank 31 {'n': 377, 'max_Im_c6': 6.977057820378718e-15, 'min_abs_c6_minus_1': 0.0, 'max_resid': 7.216449660063518e-15}
+rank 37 {'n': 22, 'max_Im_c6': 7.048667205467041e-13, 'min_abs_c6_minus_1': 0.03414503114432277, 'max_resid': 5.9396931817445875e-15}
+rank 36 {'n': 61, 'max_Im_c6': 0.08787286492270807, 'min_abs_c6_minus_1': 0.045697051100058256, 'max_resid': 6.661338147750939e-15}
+CCK6(5) {'rank': 37, 'dim': 4, 'five_stage_inconsistency': 2.220446049250313e-16, 'walk_points': 430, 'max_distance': 0.7966793251927671, 'max_five_stage_inconsistency': 6.866729407306593e-13, 'max_Im_c6': 3.519351476910515e-12}
+CCK6(5)-s {'rank': 37, 'dim': 4, 'five_stage_inconsistency': 5.551115123125783e-16, 'walk_points': 480, 'max_distance': 0.7881779159118938, 'max_five_stage_inconsistency': 1.9984014443252818e-15, 'max_Im_c6': 9.392486788328824e-14}
+CRK6-opt {'rank': 31, 'dim': 10, 'five_stage_inconsistency': 0.0024687728470173254}
