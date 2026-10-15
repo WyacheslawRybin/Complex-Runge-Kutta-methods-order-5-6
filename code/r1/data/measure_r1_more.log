@@ -24,7 +24,7 @@ k=11: [('Vern6(5)', 'Lorenz5'), ('Vern6(5)', 'Kepler'), ('Vern6(5)', 'Brusselato
 [   702s] Vern6(5)  Brusselator    N= 204800 Ch=9.63623e-04 C=8.1336e-04 conv=1.9e-02 order=6.21 approx
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
-  File "C:\Users\Vyacheslav\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+  File "<python>\Lib\multiprocessing\spawn.py", line 122, in spawn_main
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
-  File "C:\Users\Vyacheslav\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+  File "<python>\Lib\multiprocessing\spawn.py", line 122, in spawn_main

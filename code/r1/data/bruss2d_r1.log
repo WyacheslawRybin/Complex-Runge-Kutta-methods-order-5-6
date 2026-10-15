@@ -1,51 +1,51 @@
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
+code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
   uuv = u * u * v
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:53: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:53: RuntimeWarning: invalid value encountered in multiply
   uuv = u * u * v
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
   inc = h * sum(b[i] * K[i] for i in range(s) if b[i] != 0)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
+code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
   uuv = u * u * v
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in multiply
   Yi = y + h * sum(A[i, j] * K[j] for j in nz[i]) if i else y
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:53: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:53: RuntimeWarning: invalid value encountered in multiply
   uuv = u * u * v
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
   inc = h * sum(b[i] * K[i] for i in range(s) if b[i] != 0)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
+code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
   uuv = u * u * v
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in multiply
   Yi = y + h * sum(A[i, j] * K[j] for j in nz[i]) if i else y
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:53: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:53: RuntimeWarning: invalid value encountered in multiply
   uuv = u * u * v
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
   inc = h * sum(b[i] * K[i] for i in range(s) if b[i] != 0)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
+code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
   uuv = u * u * v
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:53: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:53: RuntimeWarning: invalid value encountered in multiply
   uuv = u * u * v
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
   inc = h * sum(b[i] * K[i] for i in range(s) if b[i] != 0)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
+code\bruss2d_r1.py:53: RuntimeWarning: overflow encountered in multiply
   uuv = u * u * v
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in multiply
   inc = h * sum(b[i] * K[i] for i in range(s) if b[i] != 0)
 [   14s] fixed CRK5-1       - 1.62e-04 1.37e-06 3.28e-08 1.06e-09 3.44e-11 1.02e-12 1.04e-13
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
   du = 1.0 + uuv - 4.4 * u + ALPHA * _lap(u)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
   dv = 3.4 * u - uuv + ALPHA * _lap(v)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in add
   Yi = y + h * sum(A[i, j] * K[j] for j in nz[i]) if i else y
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in add
   inc = h * sum(b[i] * K[i] for i in range(s) if b[i] != 0)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
+code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
   return (p[2:, 1:-1] + p[:-2, 1:-1] + p[1:-1, 2:] + p[1:-1, :-2] - 4.0 * w) * (NG - 1) ** 2
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:100: RuntimeWarning: invalid value encountered in subtract
+code\bruss2d_r1.py:100: RuntimeWarning: invalid value encountered in subtract
   comp = (t2 - y) - z
 [   20s] fixed CRK5-2       - - 1.57e-05 4.15e-07 1.26e-08 3.87e-10 1.19e-11 2.60e-13
 [   21s] fixed CRK5-opt     - - 2.08e-06 1.02e-07 3.83e-09 1.30e-10 4.32e-12 2.40e-13
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in multiply
   Yi = y + h * sum(A[i, j] * K[j] for j in nz[i]) if i else y
 [   29s] fixed GJM5         - - 7.27e-05 1.79e-06 4.53e-08 1.27e-09 3.78e-11 1.26e-12
 [   29s] fixed CRK5-s       - 5.55e-05 2.28e-06 9.98e-08 3.55e-09 1.18e-10 3.86e-12 2.24e-13
@@ -55,58 +55,58 @@ D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\b
 [   50s] fixed CCK6-casc/5  - - 1.10e-05 1.77e-07 3.77e-09 9.54e-11 2.58e-12 8.70e-14
 [   56s] fixed CCK6(5)-s/5  - - 4.44e-06 7.52e-08 3.62e-09 1.39e-10 4.88e-12 2.70e-13
 [   62s] fixed CRK6-lam     - 5.07e-05 1.03e-06 1.72e-08 2.82e-10 4.45e-12 8.64e-14 1.23e-13
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in multiply
+code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in multiply
   Yi = y + h * sum(A[i, j] * K[j] for j in nz[i]) if i else y
 [   74s] fixed CCK6(5)-s    - - 9.92e-06 1.41e-07 2.14e-09 3.31e-11 4.43e-13 1.19e-13
 [   75s] fixed CRK6-0       - 5.12e-04 1.42e-06 7.14e-09 6.37e-11 8.62e-13 1.10e-13 1.24e-13
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
   du = 1.0 + uuv - 4.4 * u + ALPHA * _lap(u)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
   dv = 3.4 * u - uuv + ALPHA * _lap(v)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in add
   Yi = y + h * sum(A[i, j] * K[j] for j in nz[i]) if i else y
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in add
   inc = h * sum(b[i] * K[i] for i in range(s) if b[i] != 0)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:100: RuntimeWarning: invalid value encountered in subtract
+code\bruss2d_r1.py:100: RuntimeWarning: invalid value encountered in subtract
   comp = (t2 - y) - z
 [   76s] fixed CRK6-opt     - 2.61e-04 1.67e-07 3.54e-09 6.19e-11 9.18e-13 1.10e-13 1.25e-13
 [   80s] fixed CRK6-s       - 9.29e-05 1.85e-06 2.96e-08 4.73e-10 7.58e-12 2.26e-13 1.26e-13
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
+code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
   return (p[2:, 1:-1] + p[:-2, 1:-1] + p[1:-1, 2:] + p[1:-1, :-2] - 4.0 * w) * (NG - 1) ** 2
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
   du = 1.0 + uuv - 4.4 * u + ALPHA * _lap(u)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
   dv = 3.4 * u - uuv + ALPHA * _lap(v)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in add
   inc = h * sum(b[i] * K[i] for i in range(s) if b[i] != 0)
 [   87s] fixed CCK6-casc    - 1.13e-03 1.19e-06 3.94e-08 7.20e-10 1.18e-11 1.36e-13 1.22e-13
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in add
   return (p[2:, 1:-1] + p[:-2, 1:-1] + p[1:-1, 2:] + p[1:-1, :-2] - 4.0 * w) * (NG - 1) ** 2
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
+code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
   return (p[2:, 1:-1] + p[:-2, 1:-1] + p[1:-1, 2:] + p[1:-1, :-2] - 4.0 * w) * (NG - 1) ** 2
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
   du = 1.0 + uuv - 4.4 * u + ALPHA * _lap(u)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
   dv = 3.4 * u - uuv + ALPHA * _lap(v)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:100: RuntimeWarning: invalid value encountered in subtract
+code\bruss2d_r1.py:100: RuntimeWarning: invalid value encountered in subtract
   comp = (t2 - y) - z
 [   89s] fixed CCK6(5)      - - 4.88e-06 2.33e-08 1.54e-10 1.54e-12 1.06e-13 1.24e-13
 [  100s] fixed RK4          - 3.65e-03 1.29e-04 7.76e-06 4.87e-07 3.05e-08 1.91e-09 1.20e-10
 [  100s] fixed DP6(5)       - 2.97e-05 8.27e-08 2.05e-09 3.64e-11 5.16e-13 1.18e-13 1.24e-13
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
+code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
   return (p[2:, 1:-1] + p[:-2, 1:-1] + p[1:-1, 2:] + p[1:-1, :-2] - 4.0 * w) * (NG - 1) ** 2
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:54: RuntimeWarning: invalid value encountered in add
   du = 1.0 + uuv - 4.4 * u + ALPHA * _lap(u)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:55: RuntimeWarning: invalid value encountered in add
   dv = 3.4 * u - uuv + ALPHA * _lap(v)
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:100: RuntimeWarning: invalid value encountered in subtract
+code\bruss2d_r1.py:100: RuntimeWarning: invalid value encountered in subtract
   comp = (t2 - y) - z
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:92: RuntimeWarning: invalid value encountered in add
   Yi = y + h * sum(A[i, j] * K[j] for j in nz[i]) if i else y
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in add
+code\bruss2d_r1.py:94: RuntimeWarning: invalid value encountered in add
   inc = h * sum(b[i] * K[i] for i in range(s) if b[i] != 0)
 [  102s] fixed Butcher6     - - 3.23e-05 2.97e-07 3.49e-09 4.73e-11 7.61e-13 1.30e-13
-D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
+code\bruss2d_r1.py:47: RuntimeWarning: invalid value encountered in subtract
   return (p[2:, 1:-1] + p[:-2, 1:-1] + p[1:-1, 2:] + p[1:-1, :-2] - 4.0 * w) * (NG - 1) ** 2
 [  103s] fixed Verner6(5)   - 1.48e-03 2.68e-06 6.21e-09 1.45e-11 4.58e-13 1.20e-13 1.25e-13
 [  103s] fixed RK6-opt      - 9.69e-05 2.50e-08 1.60e-10 5.57e-12 9.66e-14 1.23e-13 1.24e-13

@@ -138,4 +138,4 @@
 [   26s] Vern6(5)    Brusselator   tol 1e-15: err=4.91e-14 nfev=21738
 [   26s] Vern6(5)    Lorenz5       tol 1e-15: err=1.56e-10 nfev=40634
 [   27s] Vern6(5)    Arenstorf     tol 1e-15: err=5.78e-09 nfev=36490
-wrote D:\HDD\Науко\2026\Complex Methods\Paper order 5-6\Submission MDPI R1\data\adaptive_tol15_r1.json
+wrote data\adaptive_tol15_r1.json
