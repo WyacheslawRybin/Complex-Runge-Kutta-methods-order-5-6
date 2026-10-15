@@ -31,6 +31,7 @@ from mpmath import iv
 import r1common as R
 import crk
 from tableaux import load_refined
+import krawczyk_r1 as KR
 from krawczyk_r1 import D, Cx, conditions, mid, rounded
 
 mp.mp.dps = 90
@@ -144,9 +145,10 @@ def interval_nonsingular(JX, rows, m):
 
 def prove(name, variant, tabs):
     t0 = time.time()
-    T, _, _ = tabs[name].refine(tol_digits=85, iters=10)
+    T, rshift, _ = tabs[name].refine(tol_digits=85, iters=10)
     s, p = T.s, T.p
     x = list(T.get_x())
+    x_ref = list(x)
     n = len(x)
     fun = lambda vals, fp, s_, p_: d1_system(vals, fp, s_, p_, variant)
     G0, J0 = evaluate(fun, x, list(range(n)), s, p)
@@ -156,7 +158,7 @@ def prove(name, variant, tabs):
     piv = sl.qr(Jf, pivoting=True)[2]
     free, fixed = sorted(piv[:m]), sorted(piv[m:])
     for q in fixed:
-        x[q] = rounded(x[q], 100)
+        x[q] = rounded(x[q], KR.FIX_BITS)
     for it in range(10):
         G, J = evaluate(fun, x, free, s, p)
         Gm = mp.matrix([mid(z) for z in G])
@@ -167,6 +169,7 @@ def prove(name, variant, tabs):
             x[q] -= dx[k]
     for q in free:
         x[q] = rounded(x[q], 280)
+    shift = max(abs(a - b) for a, b in zip(x, x_ref))
     G, J = evaluate(fun, x, free, s, p)
     C = mp.inverse(mp.matrix([[mid(z) for z in row] for row in J]))
     _, JX = evaluate(fun, x, free, s, p, box=RHO)
@@ -197,7 +200,8 @@ def prove(name, variant, tabs):
     info = dict(variant=variant, equations=m, unknowns=n, fixed=[int(q) for q in fixed], proved=bool(ok),
                 box_radius=float(RHO), K_radius=float(worst), G_enclosure=float(Gmax),
                 F37_enclosure_at_point=float(Fmax), rank37_cert_norm=float(nrm), rank37_ge_31=bool(nrm < 1),
-                cond_square=float(sv_all[0] / sv_all[-1]), seconds=round(time.time() - t0))
+                cond_square=float(sv_all[0] / sv_all[-1]), shift_from_refined=float(shift),
+                shift_refinement_of_stored=float(rshift), seconds=round(time.time() - t0))
     print(f"{name:9s} {variant:5s} {m} equations, {n} unknowns: {'PROVED' if ok else 'not proved'}  "
           f"|G(y~)| <= {float(Gmax):.1e}, K - y~ within {float(worst):.1e};  all 37 conditions "
           f"|F(y~)| <= {float(Fmax):.1e};  rank >= 31 certificate ||I - CJ|| = {float(nrm):.2e}  "

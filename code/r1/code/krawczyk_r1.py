@@ -9,7 +9,8 @@ zero in X (Krawczyk 1969, Moore 1977, Rump 2010).  F and its Jacobian over X are
 forward-mode differentiation in mpmath interval arithmetic (outward rounding, 320 bits), so the test
 is rigorous up to the correctness of mpmath's interval arithmetic.
 
-The fixed unknowns are rounded to 100-bit binary numbers and the free ones to 280-bit numbers, so
+The fixed unknowns are rounded to 200-bit binary numbers (so that the exact zero lies within 1e-50 of the
+refined tableau) and the free ones to 280-bit numbers, so
 every input is exactly representable.  Writes ../data/krawczyk.json.
 Usage:  python krawczyk_r1.py [name ...]   (name[6] = sixth-order level of a CCK6 pair; name[6]+c6 = the
         same with the additional equation Im c_6 = 0, which by Proposition emb5(b) proves an exact 6(5) pair)
@@ -26,6 +27,7 @@ from tableaux import load_refined
 mp.mp.dps = 90
 iv.prec = 320
 RHO = mp.mpf(10) ** -50          # radius of the box X
+FIX_BITS = 200                   # the fixed unknowns are rounded to binary numbers of this length
 OUT = os.path.join(R.DATA, "krawczyk.json")
 NAMES = ["CCK6(5)[6]", "CCK6(5)-s[6]", "CRK5-opt", "CRK5-s"]
 
@@ -146,9 +148,10 @@ def prove(name, tabs):
     imc6 = name.endswith("+c6")
     base = name[:-3] if imc6 else name
     T = tabs[base[:-3]].level(0) if base.endswith("[6]") else tabs[base]
-    T, _, _ = T.refine(tol_digits=85, iters=10)
+    T, rshift, _ = T.refine(tol_digits=85, iters=10)
     s, p = T.s, T.p
     x = T.get_x()
+    x_ref = list(x)
     n = len(x)
     # choice of the unknowns kept free: column-pivoted QR of the Jacobian at the point
     _, J0 = evaluate(x, list(range(n)), s, p, imc6=imc6)
@@ -157,10 +160,10 @@ def prove(name, tabs):
     piv = sl.qr(Jf, pivoting=True)[2]
     free, fixed = sorted(piv[:m]), sorted(piv[m:])
     sv = np.linalg.svd(Jf[:, free], compute_uv=False)
-    # fix the others at 100-bit values and re-solve the square system (Newton in 90 digits)
+    # fix the others at 200-bit values and re-solve the square system (Newton in 90 digits)
     x = list(x)
     for q in fixed:
-        x[q] = rounded(x[q], 100)
+        x[q] = rounded(x[q], FIX_BITS)
     for it in range(8):
         F, J = evaluate(x, free, s, p, imc6=imc6)
         Fm = mp.matrix([mid(z) for z in F])
@@ -171,6 +174,7 @@ def prove(name, tabs):
             x[q] -= dx[k]
     for q in free:
         x[q] = rounded(x[q], 280)
+    shift = max(abs(a - b) for a, b in zip(x, x_ref))
     # Krawczyk test
     F, J = evaluate(x, free, s, p, imc6=imc6)
     C = mp.inverse(mp.matrix([[mid(z) for z in row] for row in J]))
@@ -195,10 +199,12 @@ def prove(name, tabs):
     Fmax = max(max(abs(mp.mpf(z.a)), abs(mp.mpf(z.b))) for z in F)
     info = dict(conditions=m, unknowns=n, fixed=[int(q) for q in fixed], proved=bool(ok),
                 box_radius=float(RHO), K_radius=float(worst), F_enclosure=float(Fmax),
-                cond_square=float(sv[0] / sv[-1]), seconds=round(time.time() - t0))
+                cond_square=float(sv[0] / sv[-1]), shift_from_refined=float(shift),
+                shift_refinement_of_stored=float(rshift), seconds=round(time.time() - t0))
     print(f"{name:12s} {m} conditions, {n} unknowns, fixed {info['fixed']}: "
           f"{'PROVED' if ok else 'not proved'}  |F(y~)| <= {float(Fmax):.1e}, "
-          f"K - y~ within {float(worst):.1e} < {float(RHO):.0e}, cond {info['cond_square']:.1e}  "
+          f"K - y~ within {float(worst):.1e} < {float(RHO):.0e}, cond {info['cond_square']:.1e}, "
+          f"shift {float(shift):.1e} (refinement {float(rshift):.1e})  "
           f"[{info['seconds']}s]", flush=True)
     return info
 

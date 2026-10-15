@@ -1,0 +1,4 @@
+CCK6(5)    identities 2.8e-46; singular values of (d, delta2, d2) 1.05e-01 1.01e-02 3.75e-03; 3x3 cond 4.04e+01; 4-stage level residual 6.9e-45; lower levels 3: rank 4 resid 9e-61, 2: rank 2 resid 3e-61, 1: rank 1 resid 0e+00
+CCK6(5)-s  identities 1.6e-45; singular values of (d, delta2, d2) 3.98e-01 1.18e-01 4.70e-03; 3x3 cond 1.80e+02; 4-stage level residual 4.4e-45; lower levels 3: rank 4 resid 3e-61, 2: rank 2 resid 3e-61, 1: rank 1 resid 0e+00
+CCK6-casc  identities 5.1e-46; singular values of (d, delta2, d2) 1.64e-01 8.88e-03 1.84e-03; 3x3 cond 1.49e+02; 4-stage level residual 4.1e-44; lower levels 3: rank 4 resid 5e-61, 2: rank 2 resid 6e-61, 1: rank 1 resid 0e+00
+CCK6(5)-v  identities 4.3e-45; singular values of (d, delta2, d2) 2.02e-01 8.92e-03 7.07e-46; 3x3 cond 1.69e+46; 4-stage level residual 1.3e-43; lower levels 3: rank 4 resid 9e-62, 2: rank 2 resid 5e-61, 1: rank 1 resid 0e+00

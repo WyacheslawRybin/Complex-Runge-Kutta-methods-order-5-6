@@ -1,0 +1,3 @@
+1500 points, rank 37, distance up to 1.00; vanishing affine functions: 2
+vanishing (nontrivial, < 1e-9): Im Phi_[t](6) 2e-12, Im Phi_[t,t](6) 4e-12, Im Phi_[t,t,t](6) 5e-12, Im Phi_[t,t,t,t](6) 7e-12, Im Phi_[t,t,t,t,t](6) 9e-12, Im Phi_[[t],[t]](6) 3e-11, Im Phi_[[t],[t],t](6) 3e-11, Im C2_6 4e-11, Im Phi_[[t]](6) 4e-11, Im Phi_[[t],t](6) 4e-11, Im Phi_[[t],t,t](6) 4e-11, Im Phi_[[t],t,t,t](6) 4e-11
+smallest nonvanishing: Im b^T Phi_[[[[[t]]]]] 6.0e-04, Im Phi_[t,t,t,t,t](2) 9.4e-04, Im Phi_[[[[t,t]]]](6) 2.8e-03, Im Phi_[t,t,t,t](2) 3.1e-03, Im b^T Phi_[[[[t,t]]]] 3.1e-03

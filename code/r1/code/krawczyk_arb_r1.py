@@ -66,7 +66,7 @@ def prove_arb(name, tabs):
     free, fixed = sorted(piv[:m]), sorted(piv[m:])
     x = list(x)
     for q in fixed:
-        x[q] = KR.rounded(x[q], 100)
+        x[q] = KR.rounded(x[q], KR.FIX_BITS)
     for _ in range(8):
         F, J = KR.evaluate(x, free, s, p, imc6=imc6)
         Fm = mp.matrix([KR.mid(z) for z in F])
@@ -123,7 +123,7 @@ def prove_d1_arb(name, variant, tabs):
     piv = sl.qr(Jf, pivoting=True)[2]
     free, fixed = sorted(piv[:m]), sorted(piv[m:])
     for q in fixed:
-        x[q] = KR.rounded(x[q], 100)
+        x[q] = KR.rounded(x[q], KR.FIX_BITS)
     for _ in range(10):
         G, J = D1.evaluate(fun, x, free, s, p)
         Gm = mp.matrix([KR.mid(z) for z in G])

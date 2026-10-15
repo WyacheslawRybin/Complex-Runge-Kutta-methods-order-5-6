@@ -5540,12 +5540,14 @@
    ],
    "proved": true,
    "box_radius": 1e-50,
-   "K_radius": 2.5582029107905477e-85,
-   "G_enclosure": 5.906247223104459e-85,
-   "F37_enclosure_at_point": 5.906247223104459e-85,
+   "K_radius": 2.2644816255717245e-85,
+   "G_enclosure": 1.4610446106766792e-84,
+   "F37_enclosure_at_point": 1.4610446106766792e-84,
    "rank37_cert_norm": 1.5524900151583507e-43,
    "rank37_ge_31": true,
    "cond_square": 86564.77942318081,
+   "shift_from_refined": 3.093055571338681e-61,
+   "shift_refinement_of_stored": 5.631118217356687e-46,
    "seconds": 4
   },
   "CRK6-s": {
@@ -5566,12 +5568,14 @@
    ],
    "proved": true,
    "box_radius": 1e-50,
-   "K_radius": 1.1031760829184182e-85,
-   "G_enclosure": 1.6097367416195844e-85,
-   "F37_enclosure_at_point": 1.6097367416195844e-85,
+   "K_radius": 1.0753001391183455e-85,
+   "G_enclosure": 6.434446986835036e-86,
+   "F37_enclosure_at_point": 6.434446986835036e-86,
    "rank37_cert_norm": 5.26336469034912e-45,
    "rank37_ge_31": true,
    "cond_square": 10787.225230513766,
+   "shift_from_refined": 1.0527529239020193e-61,
+   "shift_refinement_of_stored": 5.3189049440949046e-46,
    "seconds": 3
   },
   "CRK6-0": {
@@ -5592,13 +5596,15 @@
    ],
    "proved": true,
    "box_radius": 1e-50,
-   "K_radius": 4.669171407220236e-85,
-   "G_enclosure": 1.5898360478203483e-84,
-   "F37_enclosure_at_point": 1.5898360478203483e-84,
+   "K_radius": 2.2491024981230065e-85,
+   "G_enclosure": 1.156243880403728e-84,
+   "F37_enclosure_at_point": 1.156243880403728e-84,
    "rank37_cert_norm": 2.2065142235964766e-43,
    "rank37_ge_31": true,
    "cond_square": 64164.32577547015,
-   "seconds": 4
+   "shift_from_refined": 8.810991499858598e-61,
+   "shift_refinement_of_stored": 1.481296461136184e-45,
+   "seconds": 3
   },
   "CRK6-lam": {
    "variant": "D1c2",
@@ -5618,12 +5624,14 @@
    ],
    "proved": true,
    "box_radius": 1e-50,
-   "K_radius": 1.2582500550875154e-85,
-   "G_enclosure": 1.9303340960505108e-85,
-   "F37_enclosure_at_point": 1.9303340960505108e-85,
+   "K_radius": 9.323638440616186e-86,
+   "G_enclosure": 7.896024368645411e-86,
+   "F37_enclosure_at_point": 6.434446986835036e-86,
    "rank37_cert_norm": 2.7187028228905e-45,
    "rank37_ge_31": true,
    "cond_square": 31642.534397868505,
+   "shift_from_refined": 2.4559790943651906e-61,
+   "shift_refinement_of_stored": 5.274866003949031e-46,
    "seconds": 3
   }
  }

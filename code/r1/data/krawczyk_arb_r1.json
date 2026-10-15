@@ -18,9 +18,9 @@
   ],
   "proved": true,
   "box_radius": 1e-50,
-  "K_radius_upper": 2.3915066397680693e-85,
+  "K_radius_upper": 8.047701588985956e-86,
   "prec_bits": 320,
-  "seconds": 1
+  "seconds": 0
  },
  "CRK5-s": {
   "conditions": 17,
@@ -41,9 +41,9 @@
   ],
   "proved": true,
   "box_radius": 1e-50,
-  "K_radius_upper": 8.562164525161326e-86,
+  "K_radius_upper": 1.1495382736851328e-85,
   "prec_bits": 320,
-  "seconds": 1
+  "seconds": 0
  },
  "CCK6(5)[6]": {
   "conditions": 37,
@@ -56,7 +56,7 @@
   ],
   "proved": true,
   "box_radius": 1e-50,
-  "K_radius_upper": 1.880905916299476e-85,
+  "K_radius_upper": 2.2326476601351594e-85,
   "prec_bits": 320,
   "seconds": 3
  },
@@ -71,9 +71,9 @@
   ],
   "proved": true,
   "box_radius": 1e-50,
-  "K_radius_upper": 2.3641848620469442e-85,
+  "K_radius_upper": 2.0229160152564376e-85,
   "prec_bits": 320,
-  "seconds": 3
+  "seconds": 2
  },
  "pair20[6]+c6": {
   "conditions": 38,
@@ -85,17 +85,17 @@
   ],
   "proved": true,
   "box_radius": 1e-50,
-  "K_radius_upper": 1.9950204011399656e-85,
+  "K_radius_upper": 4.5667219743600224e-85,
   "prec_bits": 320,
-  "seconds": 2
+  "seconds": 1
  },
  "CRK6-opt|D1": {
   "variant": "D1",
   "equations": 31,
   "unknowns": 41,
   "proved": true,
-  "K_radius_upper": 2.5582029582218398e-85,
-  "rank37_cert_upper": 1.5524901071203442e-43,
+  "K_radius_upper": 2.2644817564830727e-85,
+  "rank37_cert_upper": 1.5524901071204348e-43,
   "rank37_ge_31": true,
   "seconds": 3
  },
@@ -104,8 +104,8 @@
   "equations": 31,
   "unknowns": 41,
   "proved": true,
-  "K_radius_upper": 1.1031760896146477e-85,
-  "rank37_cert_upper": 5.263364999709351e-45,
+  "K_radius_upper": 1.0753001485083292e-85,
+  "rank37_cert_upper": 5.263364999708432e-45,
   "rank37_ge_31": true,
   "seconds": 3
  },
@@ -114,8 +114,8 @@
   "equations": 31,
   "unknowns": 41,
   "proved": true,
-  "K_radius_upper": 4.669171521926906e-85,
-  "rank37_cert_upper": 2.2065143771508613e-43,
+  "K_radius_upper": 2.249102590300454e-85,
+  "rank37_cert_upper": 2.2065143804921107e-43,
   "rank37_ge_31": true,
   "seconds": 3
  },
@@ -124,9 +124,9 @@
   "equations": 31,
   "unknowns": 41,
   "proved": true,
-  "K_radius_upper": 1.2582500991494496e-85,
-  "rank37_cert_upper": 2.7187029840538886e-45,
+  "K_radius_upper": 9.323638596427648e-86,
+  "rank37_cert_upper": 2.7187029892734404e-45,
   "rank37_ge_31": true,
-  "seconds": 3
+  "seconds": 2
  }
 }

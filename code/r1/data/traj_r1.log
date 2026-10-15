@@ -1,0 +1,69 @@
+[    4s] 1/60 exponential datum 4
+[    4s] 2/60 exponential datum 0, DOP853 vs Taylor at T 2.2e-16
+[    5s] 3/60 exponential datum 1
+[    5s] 4/60 exponential datum 2
+[    5s] 5/60 exponential datum 3
+[    5s] 6/60 exponential datum 5
+[   14s] 7/60 nonautonomous datum 0, DOP853 vs Taylor at T 1.3e-14
+[   14s] 8/60 nonautonomous datum 2
+[   14s] 9/60 nonautonomous datum 1
+[   14s] 10/60 nonautonomous datum 5
+[   14s] 11/60 nonautonomous datum 4
+[   14s] 12/60 nonautonomous datum 3
+[   22s] 13/60 VanderPol datum 0, DOP853 vs Taylor at T 7.4e-15
+[   22s] 14/60 VanderPol datum 2
+[   22s] 15/60 VanderPol datum 1
+[   22s] 16/60 VanderPol datum 3
+[   22s] 17/60 VanderPol datum 4
+[   22s] 18/60 VanderPol datum 5
+[   29s] 19/60 Rossler datum 0, DOP853 vs Taylor at T 2.9e-15
+[   29s] 20/60 Rossler datum 2
+[   29s] 21/60 Rossler datum 1
+[   30s] 22/60 Rossler datum 4
+[   30s] 23/60 Rossler datum 3
+[   30s] 24/60 Rossler datum 5
+[   40s] 25/60 Bouali datum 0, DOP853 vs Taylor at T 8.6e-13
+[   40s] 26/60 Bouali datum 1
+[   41s] 27/60 Bouali datum 2
+[   41s] 28/60 Bouali datum 3
+[   41s] 29/60 Bouali datum 4
+[   42s] 30/60 Bouali datum 5
+[   97s] 31/60 Lorenz5 datum 0, DOP853 vs Taylor at T 3.6e-12
+[   99s] 32/60 Lorenz5 datum 1
+[   99s] 33/60 Lorenz5 datum 5
+[   99s] 34/60 Lorenz5 datum 4
+[   99s] 35/60 Lorenz5 datum 2
+[  100s] 36/60 Lorenz5 datum 3
+[  127s] 37/60 Kepler datum 3
+[  129s] 38/60 Kepler datum 0, DOP853 vs Taylor at T 7.4e-13
+[  131s] 39/60 Kepler datum 1
+[  131s] 40/60 Kepler datum 2
+[  132s] 41/60 Kepler datum 4
+[  132s] 42/60 Kepler datum 5
+[  138s] 43/60 RigidBody datum 0, DOP853 vs Taylor at T 5.9e-15
+[  139s] 44/60 RigidBody datum 1
+[  142s] 45/60 RigidBody datum 2
+[  142s] 46/60 RigidBody datum 3
+[  143s] 47/60 RigidBody datum 5
+[  143s] 48/60 RigidBody datum 4
+[  169s] 49/60 Brusselator datum 0, DOP853 vs Taylor at T 3.4e-15
+[  171s] 50/60 Brusselator datum 1
+[  173s] 51/60 Brusselator datum 3
+[  174s] 52/60 Brusselator datum 2
+[  174s] 53/60 Brusselator datum 5
+[  175s] 54/60 Brusselator datum 4
+[  216s] 55/60 Arenstorf datum 1
+[  216s] 56/60 Arenstorf datum 2
+[  217s] 57/60 Arenstorf datum 0, DOP853 vs Taylor at T 4.4e-11
+[  217s] 58/60 Arenstorf datum 4
+[  219s] 59/60 Arenstorf datum 5
+[  219s] 60/60 Arenstorf datum 3
+err_T    eps 1e-06: CRK6(4) cheaper than the best real order-six pair in 33 of 60 (problem, initial datum) cases, median saving +2.3%
+err_traj eps 1e-06: CRK6(4) cheaper than the best real order-six pair in 36 of 60 (problem, initial datum) cases, median saving +4.9%
+   unperturbed, err_T: cheaper on 5 problems: ['exponential', 'VanderPol', 'Bouali', 'Kepler', 'Arenstorf']
+   unperturbed, err_traj: cheaper on 6 problems: ['exponential', 'nonautonomous', 'VanderPol', 'Bouali', 'Kepler', 'Arenstorf']
+err_T    eps 1e-08: CRK6(4) cheaper than the best real order-six pair in 28 of 60 (problem, initial datum) cases, median saving -5.6%
+err_traj eps 1e-08: CRK6(4) cheaper than the best real order-six pair in 22 of 60 (problem, initial datum) cases, median saving -3.2%
+   unperturbed, err_T: cheaper on 5 problems: ['nonautonomous', 'VanderPol', 'Bouali', 'Kepler', 'Arenstorf']
+   unperturbed, err_traj: cheaper on 4 problems: ['nonautonomous', 'VanderPol', 'Bouali', 'Arenstorf']
+wrote r1\data\traj_r1.json
