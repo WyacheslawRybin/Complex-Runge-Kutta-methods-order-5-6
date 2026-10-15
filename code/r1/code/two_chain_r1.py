@@ -125,19 +125,30 @@ BOUND = 5.0
 
 
 def err_vec(x):
-    e = -RHS_NEXT.copy()
+    e = -RHS_NEXT.astype(x.dtype)
     for A, b in unpack(x):
         cache = {}
 
         def P(t):
             if t not in cache:
-                v = np.ones(S)
+                v = np.ones(S, dtype=A.dtype)
                 for u in t:
                     v = v * (A @ P(u))
                 cache[t] = v
             return cache[t]
-        e += np.array([b @ P(t) for t in TREES_NEXT])
+        e = e + np.array([b @ P(t) for t in TREES_NEXT])
     return e / SIG
+
+
+def err_jac(x):
+    """Exact Jacobian of err_vec by the complex step."""
+    h = 1e-30
+    J = np.empty((len(TREES_NEXT), len(x)))
+    for k in range(len(x)):
+        z = x.astype(complex)
+        z[k] += 1j * h
+        J[:, k] = err_vec(z).imag / h
+    return J
 
 
 def num_jac(fun, x, h=1e-7):
@@ -152,7 +163,7 @@ def num_jac(fun, x, h=1e-7):
 def emin_one(x0):
     from scipy.optimize import minimize
     obj = lambda z: float(err_vec(z) @ err_vec(z))
-    sol = minimize(obj, x0, jac=lambda z: 2 * num_jac(err_vec, z).T @ err_vec(z), method="SLSQP",
+    sol = minimize(obj, x0, jac=lambda z: 2 * err_jac(z).T @ err_vec(z), method="SLSQP",
                    constraints=[dict(type="eq", fun=residual, jac=jac),
                                 dict(type="ineq", fun=lambda z: BOUND - np.abs(z)), ],
                    options=dict(maxiter=500, ftol=1e-18))
@@ -177,6 +188,7 @@ def emin(nstarts=40):
           f"descents: " + " ".join(f"{r[0]:.3e}" for r in res[:5]))
     d["emin"] = dict(bound=BOUND, E=[r[0] for r in res], best_x=res[0][1] if res else None)
     json.dump(d, open(OUT, "w"), indent=1)
+
 
 
 # ---------------------------------------------------------------- existence proof (Krawczyk) for the best tableau
@@ -275,5 +287,6 @@ if __name__ == "__main__":
         emin()
     elif sys.argv[1:2] == ["prove"]:
         prove()
+
     else:
         main(int(sys.argv[1]) if len(sys.argv) > 1 else 2000)

@@ -64,6 +64,8 @@ def main():
                 ax.set_ylabel(r"fraction of problems $\varphi(\omega)$")
         h, l = axs[row, 0].get_legend_handles_labels()
         axs[row, 2].legend(h, l, loc="lower right", fontsize=6.3, handlelength=2.2)
+    from figures_r1 import enlarge
+    enlarge(fig)
     F.save(fig, "fig_profiles")
     json.dump(out, open(os.path.join(R.DATA, "profiles.json"), "w"), indent=1)
     for title, methods in GROUPS:

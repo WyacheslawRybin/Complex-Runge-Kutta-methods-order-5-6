@@ -33,22 +33,23 @@ Section, proposition and appendix numbers refer to the MDPI version of the paper
 | Topic | What | Files |
 |---|---|---|
 | Coefficients | coefficients of all tableaux with 45 digits | `code/base/data/tableaux.json`, `code/r1/data/tableaux_r1.json` |
-| Order conditions | computer-algebra check of the proof of Butcher's barrier over C (Proposition 2, Appendix C) | `code/base/code/barrier_proof_check.py` |
+| Order conditions | computer-algebra check of the proof of Butcher's barrier over C (Lemma 2, Appendix C) | `code/base/code/barrier_proof_check.py` |
 | Order conditions | refinement of the tableaux; residuals, error constants, ranks, stability polynomials | `code/base/code/check_tableaux.py` |
 | Order conditions | coefficients rounded to double precision | `code/r1/code/roundoff_r1.py` |
 | Order conditions | checks with the full-precision coefficients | `code/r1/code/checks45_r1.py` |
 | Structure (Sect. 3) | singular-value spectra in 90 digits, continuation along the tangent directions | `code/r1/code/spectra_r1.py`, `code/r1/code/structure_r1.py` |
-| Structure (Sect. 3) | projected D(1) and the Krawczyk test (Propositions 5, 6) | `code/r1/code/d1_r1.py`, `code/r1/code/krawczyk_r1.py` |
+| Structure (Sect. 3) | projected D(1) and the Krawczyk test (Propositions 3, 4) | `code/r1/code/d1_r1.py`, `code/r1/code/krawczyk_r1.py` |
 | Structure (Sect. 3) | Jacobian ranks and embedded kernels at all visited tableaux | `code/base/code/rank_survey.py` |
-| Structure (Sect. 3) | fifth-order formulas b + θd and the reality of c6 (Proposition 7) | `code/r1/code/cck6_identity_r1.py` |
-| Structure (Sect. 3) | rank certificates of the fifth-order conditions (Proposition 7(c)) | `code/r1/code/kernel_proof_r1.py` |
-| Structure (Sect. 3) | existence of the pair CCK6(5)-v (Proposition 8) | `code/r1/code/krawczyk_pairs_r1.py`, `code/r1/data/cck6v_r1.json` |
+| Structure (Sect. 3) | fifth-order formulas b + θd and the reality of c6 (Proposition 5) | `code/r1/code/cck6_identity_r1.py` |
+| Structure (Sect. 3) | rank certificates of the fifth-order conditions (Proposition 5(c)) | `code/r1/code/kernel_proof_r1.py` |
+| Structure (Sect. 3) | existence of the pair CCK6(5)-v (Proposition 6) | `code/r1/code/krawczyk_pairs_r1.py`, `code/r1/data/cck6v_r1.json` |
 | Structure (Sect. 3) | assumption (W), random walk and proof of Theorem 1 | `code/r1/code/conjecture_r1.py`, `code/r1/code/conjecture_proof_r1.py` |
-| Structure (Sect. 3) | assumption (W0) and existence of the cascade (Proposition 10) | `code/r1/code/cascade_proof_r1.py` |
+| Structure (Sect. 3) | assumption (W0) and existence of the cascade (Proposition 8) | `code/r1/code/cascade_proof_r1.py` |
 | Structure (Sect. 3) | repetition of all Krawczyk tests in Arb | `code/r1/code/krawczyk_arb_r1.py` |
 | Error constants (Sect. 4) | minimization under a coefficient bound, fronts, degenerate branches | `code/base/code/optimize_E.py`, `code/base/code/front_E.py`, `code/base/code/polish_opt.py`, `code/base/code/degenerate_check.py` |
+| Error constants (Sect. 4) | is the bound 1/720 attained in CRK5? | `code/r1/code/crk5_bound_r1.py` |
 | Embedded formulas (Sect. 5) | embedded formulas and the pairs CRK5(4), CRK6(4) | `code/base/code/embedded.py` |
-| Embedded formulas (Sect. 5) | fourth-order formulas of Proposition 11 and the cascades of the pairs | `code/r1/code/emb4_r1.py` |
+| Embedded formulas (Sect. 5) | fourth-order formulas of Proposition 9 and the cascades of the pairs | `code/r1/code/emb4_r1.py` |
 | Embedded formulas (Sect. 5) | embedded formulas of the real seven-stage tableaux, pair RK6-opt(4) | `code/r1/code/real64_r1.py` |
 | Stability (Sect. 6) | stability and preference regions | `code/base/code/stability.py`, `code/base/code/prefregions.py`, `code/r1/code/stability_r1.py` |
 | Stability (Sect. 6) | harmonic oscillator and Kepler problem over long times | `code/r1/code/longtime_r1.py` |

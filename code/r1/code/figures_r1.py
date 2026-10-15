@@ -20,6 +20,16 @@ F.FIG = R.FIG
 plt = F.plt
 
 
+FONT_SCALE = 1.3        # figures 4 and 5 of the MDPI version (review of 15.10.2026, M7): larger lettering
+
+
+def enlarge(fig, k=FONT_SCALE):
+    """Scale every text of a figure (titles, labels, tick labels, legends) by k."""
+    import matplotlib.text
+    for t in fig.findobj(matplotlib.text.Text):
+        t.set_fontsize(t.get_fontsize() * k)
+
+
 def front_E(fam, bmax=100.0):
     """E_min(B) over the bound/continuation chains and the multistart runs with B = 100."""
     d = json.load(open(os.path.join(R.ORIG_DATA, "front_E.json")))
@@ -109,6 +119,7 @@ def fig_adaptive():
                  ncol=len(FC.ADAPT5))
     FC._wp_block(sfs[1], curves, FC.ADAPT6, FC.REF[6], probs, "order-6 pairs", name, "RHS evaluations incl. rejections",
                  ncol=len(FC.ADAPT6))
+    enlarge(fig)
     F.save(fig, "fig_wp_adaptive")
     fig = plt.figure(figsize=(7.2, 5.0), layout="constrained")
     sfs = fig.subfigures(2, 1, hspace=0.04)
