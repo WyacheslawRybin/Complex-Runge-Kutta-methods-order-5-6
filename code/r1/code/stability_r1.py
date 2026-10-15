@@ -20,7 +20,7 @@ import prefregions as PR
 from tableaux import load_refined
 
 ROWS = [  # label, tableau, evaluations per step; the first row of each order is T_p
-    [(r"$T_5$: CRK5, CCK6 emb.", "CRK5-opt", 5), ("DP5(4)", "DP5", 6), ("CK5(4)", "CK5", 6),
+    [(r"$T_5$: CRK5", "CRK5-opt", 5), ("DP5(4)", "DP5", 6), ("CK5(4)", "CK5", 6),
      ("Tsit5(4)", "Tsit5(4)", 6), ("BS5(4)", "BS5(4)", 7)],
     [(r"$T_6$: CRK6, CCK6", "CRK6-opt", 6), ("Butcher6", "Butcher6", 7), ("RK6-opt", "RK6-opt", 7),
      ("DP6(5)", "DP6(5)", 8), ("Verner6(5)", "Verner6(5)", 8), ("Vern6(5)", "Vern6(5)", 8)],

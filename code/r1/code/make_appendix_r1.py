@@ -40,7 +40,7 @@ def main():
         t = T[k]
         Es = ", ".join(rf"E_{{{p + 1}}}={MA.tex(e, 6)}" for (m, p), e in zip(t["levels"], t["E"]))
         return (rf"${Es}$, $\max|\text{{coef}}|={t['maxcoef']:.6f}$, residual of the projected conditions "
-                rf"${MA.tex(t['resid_refined'])}$; shift of the printed coefficients by the refinement "
+                rf"${MA.tex(t['resid_refined'])}$; shift of the original coefficients by the refinement "
                 rf"${MA.tex(t['refine_shift'])}$. {extra}")
 
     out = []
