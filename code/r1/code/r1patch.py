@@ -31,7 +31,7 @@ def order_of(lab):
     """Order of the propagated solution; results.ORDER_OF of the original code knows only the original names."""
     if lab in ("Tsit5(4)", "BS5(4)"):
         return 5
-    if lab == "Vern6(5)":
+    if lab in ("Vern6(5)", "RK6-opt(4)"):
         return 6
     return _ORDER_OF0(lab)
 
@@ -77,6 +77,15 @@ def build():
         for name, probs in json.load(open(ext)).items():
             for prob, rows in probs.items():
                 ad[name][prob] = [r for r in ad[name][prob] if r["tol"] > 10 ** -13.25] + rows
+    # Vern6(5) with split double-precision coefficients (vern6_split_r1.py) replaces the runs with plainly
+    # rounded coefficients, whose defect in the condition of order two caused a floor near 1e-10
+    split = os.path.join(R.DATA, "adaptive_vern6split_r1.json")
+    if os.path.exists(split):
+        ad.update(json.load(open(split)))
+    # the real FSAL pair 6(4) on the seven stages of RK6-opt (real64_r1.py), the counterpart of CRK6(4)
+    r64 = os.path.join(R.DATA, "adaptive_real64_r1.json")
+    if os.path.exists(r64):
+        ad.update({k: {q: rows for q, rows in v.items() if q != "Bruss2D"} for k, v in json.load(open(r64)).items()})
     info = new_pairs_info()
     tab = o("tableaux.json")
     emb = o("embedded.json")
@@ -117,6 +126,15 @@ def apply():
     FC.EVALS.update(EVALS_NEW)
     FC.BENCH_KEY.update({k: k for k in NEW})
     MT.PAIR_OF.update({k: k for k in NEW})
+    # RK6-opt(4): column of the order-six pairs, CPU time per step of RK6-opt (same seven evaluations)
+    MT.PAIR_OF["RK6-opt"] = "RK6-opt(4)"
+    MT.MNAME["RK6-opt(4)"] = "RK6-opt(4)"
+    FC.BENCH_KEY["RK6-opt(4)"] = "RK6-opt"
+    F.ST["RK6-opt(4)"] = F.ST["RK6-opt"]
+    RS.COST["RK6-opt(4)"] = 7
+    for lst in (FC.ADAPT6, FC.ADAPT):
+        if "RK6-opt(4)" not in lst:
+            lst.insert(lst.index("DP6(5)"), "RK6-opt(4)")
     # method lists: in place, since make_tables imported the list objects by name
     for lst, after, items in ((FC.FIXED5, "CK5", NEW5), (FC.FIXED6, "Verner6(5)", NEW6),
                               (FC.FIG5, "CK5", NEW5), (FC.FIG6, "Verner6(5)", NEW6),

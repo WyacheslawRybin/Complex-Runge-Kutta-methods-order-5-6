@@ -1,0 +1,17 @@
+RK6-opt   FSAL=False 8x7  singular values 3.39 1.33 0.283 0.0631 0.0315 0.0215 2.92e-46  kernel 1
+RK6-opt   FSAL=True  8x8  singular values 3.96 1.48 0.298 0.0642 0.0315 0.0237 3.68e-46 2.2e-46  kernel 2
+Butcher6  FSAL=False 8x7  singular values 3.38 1.38 0.288 0.242 0.0551 0.0284 4.52e-46  kernel 1
+Butcher6  FSAL=True  8x8  singular values 3.96 1.52 0.289 0.265 0.0583 0.0294 6.28e-46 1.15e-46  kernel 2
+RK6-opt(4): FSAL, kernel 2, resid 1.0e-46, Ahat 1.1830e-03, B = C = 0.955, max|bh| 0.291
+[    1s] RK6-opt(4) exponential   last: err=4.44e-16 nfev=5028
+[    2s] RK6-opt(4) VanderPol     last: err=7.79e-15 nfev=13687
+[    2s] RK6-opt(4) Rossler       last: err=2.05e-14 nfev=12175
+[    2s] RK6-opt(4) nonautonomous last: err=2.53e-14 nfev=10768
+[    2s] RK6-opt(4) Bouali        last: err=3.46e-15 nfev=16361
+[    3s] RK6-opt(4) RigidBody     last: err=3.66e-15 nfev=16746
+[    5s] RK6-opt(4) Kepler        last: err=9.04e-14 nfev=50290
+[    5s] RK6-opt(4) Brusselator   last: err=2.87e-15 nfev=43528
+[    7s] RK6-opt(4) Arenstorf     last: err=5.78e-10 nfev=59348
+[    7s] RK6-opt(4) Lorenz5       last: err=3.63e-12 nfev=91835
+[   14s] RK6-opt(4) Bruss2D       last: err=1.33e-13 nfev=40273
+wrote r1\data\adaptive_real64_r1.json

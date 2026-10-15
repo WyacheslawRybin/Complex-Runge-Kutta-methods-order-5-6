@@ -67,7 +67,7 @@ def fig_spectrum():
         a.set_ylim(1e-68, 3)
         a.set_yticks([1, 1e-10, 1e-20, 1e-30, 1e-40, 1e-50, 1e-60])
         a.legend(loc="center left", fontsize=6.2)
-    ax[0].set_ylabel(r"$\sigma_k/\sigma_1$")
+    ax[0].set_ylabel(r"$\varsigma_k/\varsigma_1$")
     fig.tight_layout(w_pad=0.6)
     F.save(fig, "fig_spectrum")
 

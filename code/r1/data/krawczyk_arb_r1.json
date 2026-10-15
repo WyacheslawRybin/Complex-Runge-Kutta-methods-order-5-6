@@ -1,0 +1,132 @@
+{
+ "CRK5-opt": {
+  "conditions": 17,
+  "unknowns": 29,
+  "fixed": [
+   0,
+   1,
+   4,
+   9,
+   10,
+   16,
+   17,
+   23,
+   24,
+   25,
+   26,
+   28
+  ],
+  "proved": true,
+  "box_radius": 1e-50,
+  "K_radius_upper": 2.3915066397680693e-85,
+  "prec_bits": 320,
+  "seconds": 1
+ },
+ "CRK5-s": {
+  "conditions": 17,
+  "unknowns": 29,
+  "fixed": [
+   0,
+   8,
+   13,
+   15,
+   16,
+   17,
+   19,
+   22,
+   24,
+   25,
+   26,
+   28
+  ],
+  "proved": true,
+  "box_radius": 1e-50,
+  "K_radius_upper": 8.562164525161326e-86,
+  "prec_bits": 320,
+  "seconds": 1
+ },
+ "CCK6(5)[6]": {
+  "conditions": 37,
+  "unknowns": 41,
+  "fixed": [
+   5,
+   9,
+   22,
+   23
+  ],
+  "proved": true,
+  "box_radius": 1e-50,
+  "K_radius_upper": 1.880905916299476e-85,
+  "prec_bits": 320,
+  "seconds": 3
+ },
+ "CCK6(5)-s[6]": {
+  "conditions": 37,
+  "unknowns": 41,
+  "fixed": [
+   10,
+   11,
+   15,
+   40
+  ],
+  "proved": true,
+  "box_radius": 1e-50,
+  "K_radius_upper": 2.3641848620469442e-85,
+  "prec_bits": 320,
+  "seconds": 3
+ },
+ "pair20[6]+c6": {
+  "conditions": 38,
+  "unknowns": 41,
+  "fixed": [
+   10,
+   15,
+   37
+  ],
+  "proved": true,
+  "box_radius": 1e-50,
+  "K_radius_upper": 1.9950204011399656e-85,
+  "prec_bits": 320,
+  "seconds": 2
+ },
+ "CRK6-opt|D1": {
+  "variant": "D1",
+  "equations": 31,
+  "unknowns": 41,
+  "proved": true,
+  "K_radius_upper": 2.5582029582218398e-85,
+  "rank37_cert_upper": 1.5524901071203442e-43,
+  "rank37_ge_31": true,
+  "seconds": 3
+ },
+ "CRK6-s|D1": {
+  "variant": "D1",
+  "equations": 31,
+  "unknowns": 41,
+  "proved": true,
+  "K_radius_upper": 1.1031760896146477e-85,
+  "rank37_cert_upper": 5.263364999709351e-45,
+  "rank37_ge_31": true,
+  "seconds": 3
+ },
+ "CRK6-0|D1": {
+  "variant": "D1",
+  "equations": 31,
+  "unknowns": 41,
+  "proved": true,
+  "K_radius_upper": 4.669171521926906e-85,
+  "rank37_cert_upper": 2.2065143771508613e-43,
+  "rank37_ge_31": true,
+  "seconds": 3
+ },
+ "CRK6-lam|D1": {
+  "variant": "D1c2",
+  "equations": 31,
+  "unknowns": 41,
+  "proved": true,
+  "K_radius_upper": 1.2582500991494496e-85,
+  "rank37_cert_upper": 2.7187029840538886e-45,
+  "rank37_ge_31": true,
+  "seconds": 3
+ }
+}

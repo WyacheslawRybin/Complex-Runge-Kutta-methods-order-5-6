@@ -179,6 +179,22 @@ def kappa_lat(DR, DC, s, r):
     return TC / (s * lR)
 
 
+def nu_star(name, v, s=6):
+    """Break-even nu = L_a / L_m: the largest nu at which v * kappa_lat(nu) <= 1 (kappa_lat grows with nu);
+    None if the complex pair is not cheaper even at kappa = 1."""
+    if v is None or v >= 1.0:
+        return None
+    fun, dim = {q: (f, n) for q, f, n in PROBS}[name]
+    g = lambda r: v * kappa_lat(*(lambda e: (e["DR"], e["DC"]))(evaluate(fun, dim, r)), s, r) - 1.0
+    lo, hi = 0.0, 4.0
+    if g(hi) <= 0:
+        return math.inf
+    for _ in range(50):
+        mid = 0.5 * (lo + hi)
+        lo, hi = (mid, hi) if g(mid) <= 0 else (lo, mid)
+    return lo
+
+
 def cost_ratios(eps_list=(1e-6, 1e-8, 1e-10)):
     """Best complex / best real cost at kappa = 1, within each order, fixed and variable step."""
     ad = json.load(open(os.path.join(r1patch.MERGED, "adaptive.json")))
@@ -267,7 +283,11 @@ def main():
         for r in (0.0,) + R_MAIN:
             w = v * (1.0 if r == 0.0 else d["kappa_lat"][f"6|{r:g}"])
             cells.append(MT.best(f"${w:.2f}$") if w < 0.995 else f"${w:.2f}$")
+        nus = nu_star(name, v)
+        d["nu_star_1e-08"] = nus
+        cells.append("---" if nus is None else f"${nus:.2f}$")
         lines.append(" & ".join(cells) + r"\\")
+    json.dump(res, open(OUT, "w"), indent=1)
     open(os.path.join(R.TAB, "latency.tex"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
     print("wrote tables/latency.tex and", OUT)
 

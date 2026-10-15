@@ -11,7 +11,8 @@ is rigorous up to the correctness of mpmath's interval arithmetic.
 
 The fixed unknowns are rounded to 100-bit binary numbers and the free ones to 280-bit numbers, so
 every input is exactly representable.  Writes ../data/krawczyk.json.
-Usage:  python krawczyk_r1.py [name ...]   (name[6] = sixth-order level of a CCK6 pair)
+Usage:  python krawczyk_r1.py [name ...]   (name[6] = sixth-order level of a CCK6 pair; name[6]+c6 = the
+        same with the additional equation Im c_6 = 0, which by Proposition emb5(b) proves an exact 6(5) pair)
 """
 import json, os, sys, time
 import numpy as np
@@ -68,7 +69,7 @@ class Cx:
         return Cx(a.re * b.re - a.im * b.im, a.re * b.im + a.im * b.re)
 
 
-def conditions(vals, free_pos, s, p):
+def conditions(vals, free_pos, s, p, imc6=False):
     """Projected order conditions Re(b^T Phi_t) - 1/gamma(t), rho(t) <= p, with gradients.
     vals: interval values of the real unknowns in the order of crk.Tableau.get_x()."""
     zero = D(iv.mpf(0))
@@ -111,17 +112,22 @@ def conditions(vals, free_pos, s, p):
         for i in range(1, s):
             acc = acc + b[i] * ph[i]
         out.append(acc.re - D(iv.mpf(1) / crk.gamma(t)))
+    if imc6:                                    # Im c_s = sum_j Im a_sj = 0 (Proposition emb5(b))
+        acc = A[s - 1][0].im
+        for j in range(1, s - 1):
+            acc = acc + A[s - 1][j].im
+        out.append(acc)
     return out
 
 
-def evaluate(xvals, free, s, p, box=None):
+def evaluate(xvals, free, s, p, box=None, imc6=False):
     """Residual enclosures and Jacobian enclosure (rows: conditions, columns: free unknowns)."""
     free_pos = {q: k for k, q in enumerate(free)}
     vals = [iv.mpf(v) for v in xvals]
     if box is not None:
         for q in free:
             vals[q] = vals[q] + iv.mpf([-box, box])
-    res = conditions(vals, free_pos, s, p)
+    res = conditions(vals, free_pos, s, p, imc6)
     J = [[r.g.get(k, iv.mpf(0)) for k in range(len(free))] for r in res]
     return [r.v for r in res], J
 
@@ -137,13 +143,15 @@ def rounded(v, bits):
 
 def prove(name, tabs):
     t0 = time.time()
-    T = tabs[name[:-3]].level(0) if name.endswith("[6]") else tabs[name]
+    imc6 = name.endswith("+c6")
+    base = name[:-3] if imc6 else name
+    T = tabs[base[:-3]].level(0) if base.endswith("[6]") else tabs[base]
     T, _, _ = T.refine(tol_digits=85, iters=10)
     s, p = T.s, T.p
     x = T.get_x()
     n = len(x)
     # choice of the unknowns kept free: column-pivoted QR of the Jacobian at the point
-    _, J0 = evaluate(x, list(range(n)), s, p)
+    _, J0 = evaluate(x, list(range(n)), s, p, imc6=imc6)
     Jf = np.array([[float(mid(z)) for z in row] for row in J0])
     m = Jf.shape[0]
     piv = sl.qr(Jf, pivoting=True)[2]
@@ -154,7 +162,7 @@ def prove(name, tabs):
     for q in fixed:
         x[q] = rounded(x[q], 100)
     for it in range(8):
-        F, J = evaluate(x, free, s, p)
+        F, J = evaluate(x, free, s, p, imc6=imc6)
         Fm = mp.matrix([mid(z) for z in F])
         if mp.norm(Fm, mp.inf) < mp.mpf(10) ** -85:
             break
@@ -164,9 +172,9 @@ def prove(name, tabs):
     for q in free:
         x[q] = rounded(x[q], 280)
     # Krawczyk test
-    F, J = evaluate(x, free, s, p)
+    F, J = evaluate(x, free, s, p, imc6=imc6)
     C = mp.inverse(mp.matrix([[mid(z) for z in row] for row in J]))
-    _, JX = evaluate(x, free, s, p, box=RHO)
+    _, JX = evaluate(x, free, s, p, box=RHO, imc6=imc6)
     Ci = [[iv.mpf(C[i, j]) for j in range(m)] for i in range(m)]
     rad = iv.mpf([-RHO, RHO])
     worst = mp.mpf(0)

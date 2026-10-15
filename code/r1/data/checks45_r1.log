@@ -1,0 +1,12 @@
+CRK5-opt   M_4 on five stages: smallest / largest singular value 2.77e-04 (next 1.16e-03)
+CRK5-s     M_4 on five stages: smallest / largest singular value 1.48e-04 (next 1.11e-03)
+CRK5-1     M_4 on five stages: smallest / largest singular value 2.26e-03 (next 3.76e-03)
+CRK5-2     M_4 on five stages: smallest / largest singular value 2.82e-03 (next 6.62e-03)
+GJM5       M_4 on five stages: smallest / largest singular value 8.36e-18 (next 7.80e-03)
+CCK6(5)    M_4 on five stages: smallest / largest singular value 9.70e-48 (next 8.37e-03)
+CCK6(5)-s  M_4 on five stages: smallest / largest singular value 4.98e-47 (next 1.14e-02)
+CCK6-casc  M_4 on five stages: smallest / largest singular value 1.76e-47 (next 2.96e-03)
+CRK6-opt   Jacobian of 37 conditions: sigma_31/sigma_1 = 1.20e-05, sigma_32/sigma_1 = 3.11e-48
+CRK6-s     Jacobian of 37 conditions: sigma_31/sigma_1 = 8.94e-05, sigma_32/sigma_1 = 2.32e-48
+CRK6-0     Jacobian of 37 conditions: sigma_31/sigma_1 = 2.82e-06, sigma_32/sigma_1 = 1.83e-48
+CRK6-lam   Jacobian of 37 conditions: sigma_31/sigma_1 = 9.56e-05, sigma_32/sigma_1 = 1.33e-48

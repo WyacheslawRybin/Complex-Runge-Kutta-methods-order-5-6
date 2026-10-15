@@ -1,0 +1,43 @@
+[    1s] GBS(2,4,6) exponential   last: err=1.55e-15 nfev=13300
+[    2s] GBS(2,4,6) Rossler       last: err=2.49e-14 nfev=28500
+[    2s] GBS(2,4,6) VanderPol     last: err=1.91e-14 nfev=33600
+[    2s] GBS(2,4,6) nonautonomous last: err=4.88e-15 nfev=27012
+[    3s] GBS(2,4,6) Bouali        last: err=9.55e-15 nfev=45230
+[    5s] GBS(2,4,6) RigidBody     last: err=3.06e-14 nfev=43590
+[    5s] EX5 exponential   last: err=2.22e-16 nfev=13420
+[    7s] EX5 nonautonomous last: err=1.47e-14 nfev=25364
+[    7s] GBS(2,4,6) Kepler        last: err=3.35e-14 nfev=99450
+[    9s] GBS(2,4,6) Brusselator   last: err=9.93e-15 nfev=108540
+[    9s] EX5 Rossler       last: err=6.04e-15 nfev=31383
+[    9s] EX5 VanderPol     last: err=1.31e-14 nfev=36213
+[   11s] GBS(2,4,6) Arenstorf     last: err=3.12e-10 nfev=120008
+[   11s] EX5 Bouali        last: err=1.94e-14 nfev=48335
+[   13s] GBS(2,4,6) Lorenz5       last: err=1.47e-12 nfev=209569
+[   14s] EX5 RigidBody     last: err=3.11e-14 nfev=46201
+[   15s] EX5 Kepler        last: err=1.85e-13 nfev=113597
+[   18s] EX5 Brusselator   last: err=4.13e-14 nfev=117840
+[   22s] EX5 Lorenz5       last: err=1.02e-11 nfev=228030
+[   22s] EX5 Arenstorf     last: err=3.11e-10 nfev=135781
+[   32s] GBS(2,4,6) Bruss2D       last: err=1.19e-13 nfev=89440
+[   41s] EX5 Bruss2D       last: err=1.70e-13 nfev=99099
+wrote r1\data\adaptive_gbs_r1.json
+VanderPol    GBS(2,4,6)     620  CRK6(4)     318  latency complex/real nu=1/4 1.00  nu=1 1.21  mult real 4 complex 7
+VanderPol    EX5           1432  CRK5(4)     567  latency complex/real nu=1/4 1.01  nu=1 1.22  mult real 6 complex 7
+Rossler      GBS(2,4,6)     573  CRK6(4)     344  latency complex/real nu=1/4 1.15  nu=1 1.33  mult real 4 complex 6
+Rossler      EX5           1342  CRK5(4)     611  latency complex/real nu=1/4 1.15  nu=1 1.32  mult real 6 complex 6
+Bouali       GBS(2,4,6)    1711  CRK6(4)     707  latency complex/real nu=1/4 0.81  nu=1 1.03  mult real 12 complex 17
+Bouali       EX5           4698  CRK5(4)    1846  latency complex/real nu=1/4 1.01  nu=1 1.28  mult real 18 complex 17
+Lorenz5      GBS(2,4,6)    7678  CRK6(4)    5225  latency complex/real nu=1/4 1.31  nu=1 1.51  mult real 8 complex 12
+Lorenz5      EX5          24363  CRK5(4)   11556  latency complex/real nu=1/4 1.20  nu=1 1.38  mult real 12 complex 12
+RigidBody    GBS(2,4,6)     864  CRK6(4)     497  latency complex/real nu=1/4 1.08  nu=1 1.36  mult real 8 complex 14
+RigidBody    EX5           1579  CRK5(4)     825  latency complex/real nu=1/4 1.29  nu=1 1.61  mult real 12 complex 14
+Brusselator  GBS(2,4,6)    2549  CRK6(4)    1524  latency complex/real nu=1/4 1.17  nu=1 1.49  mult real 8 complex 11
+Brusselator  EX5           5296  CRK5(4)    1988  latency complex/real nu=1/4 0.97  nu=1 1.22  mult real 12 complex 11
+Bruss2D      GBS(2,4,6)    3872  CRK6(4)    2795  latency complex/real nu=1/4 1.42  nu=1 1.70  mult real 14 complex 17
+Bruss2D      EX5           8226  CRK5(4)    3657  latency complex/real nu=1/4 1.15  nu=1 1.37  mult real 21 complex 17
+GBS(2,4,6) eps 1e-06: expone 110/43  nonaut 315/208  Vander 309/186  Rossle 271/169  Bouali 831/416  Lorenz 3704/2596  Kepler 1868/866  RigidB 477/256  Brusse 1284/847  Arenst 4609/2346
+GBS(2,4,6) eps 1e-08: expone 243/86  nonaut 774/374  Vander 620/318  Rossle 573/344  Bouali 1711/707  Lorenz 7678/5225  Kepler 3404/2085  RigidB 864/497  Brusse 2549/1524  Arenst 7551/5099
+GBS(2,4,6) eps 1e-10: expone 511/163  nonaut 1306/647  Vander 1261/554  Rossle 1189/732  Bouali 4023/2155  Lorenz 16166/10875  Kepler 6407/4898  RigidB 1914/1051  Brusse 4792/2725  Arenst 22269/10236
+EX5 eps 1e-06: expone 157/62  nonaut 578/220  Vander 646/250  Rossle 552/249  Bouali 1852/725  Lorenz 9665/4599  Kepler 4678/2287  RigidB 733/351  Brusse 2370/941  Arenst 14621/7243
+EX5 eps 1e-08: expone 403/126  nonaut 1116/445  Vander 1432/567  Rossle 1342/611  Bouali 4698/1846  Lorenz 24363/11556  Kepler 11700/5728  RigidB 1579/825  Brusse 5296/1988  Arenst 36915/18169
+EX5 eps 1e-10: expone 1003/355  nonaut 2611/1243  Vander 3388/1351  Rossle 3332/1517  Bouali 11882/4670  Lorenz 61658/29010  Kepler 29339/14388  RigidB 3488/2016  Brusse 11990/4497  Arenst inf/inf

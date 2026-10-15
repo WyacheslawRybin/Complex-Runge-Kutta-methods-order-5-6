@@ -82,7 +82,7 @@ def main():
     panel(ax[0], meas, M5, "CRK5-opt", "(a) order five: constant relative to CRK5-opt")
     panel(ax[1], meas, M6, "CRK6-opt", "(b) order six: constant relative to CRK6-opt")
     for a in ax:
-        a.set_ylabel(r"$C/C_{\mathrm{ref}}$")
+        a.set_ylabel(r"$K/K_{\mathrm{ref}}$")
     fig.tight_layout()
     F.save(fig, "fig_measured")
 

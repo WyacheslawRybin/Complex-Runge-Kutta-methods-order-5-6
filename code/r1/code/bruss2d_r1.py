@@ -205,7 +205,7 @@ def main(what="all", nproc=6):
 # ----------------------------------------------------------------------------- table
 ROWS5 = [("CRK5-opt", "CRK5(4)"), ("DP5", "DP5"), ("CK5", "CK5"), ("Tsit5(4)", "Tsit5(4)"), ("BS5(4)", "BS5(4)")]
 ROWS6 = [("CRK6-opt", "CRK6(4)"), ("CCK6(5)", "CCK6(5)"), ("CCK6(5)-s", "CCK6(5)-s"), ("CCK6-casc", "CCK6-casc"),
-         ("Butcher6", None), ("RK6-opt", None), ("DP6(5)", "DP6(5)"), ("Verner6(5)", "Verner6(5)"),
+         ("Butcher6", None), ("RK6-opt", "RK6-opt(4)"), ("DP6(5)", "DP6(5)"), ("Verner6(5)", "Verner6(5)"),
          ("Vern6(5)", "Vern6(5)")]
 EPS = (1e-6, 1e-8, 1e-10)
 
@@ -219,6 +219,9 @@ def table():
     MT = r1patch.apply()
     import figures_cost as FC
     res = json.load(open(OUT_FN))
+    r64 = os.path.join(R.DATA, "adaptive_real64_r1.json")      # real64_r1.py
+    if os.path.exists(r64):
+        res["adaptive"]["RK6-opt(4)"] = json.load(open(r64))["RK6-opt(4)"]["Bruss2D"]
     ev = dict(FC.EVALS, **{"CCK6(5)-s": 6})
 
     def fixed_cost(m, eps):

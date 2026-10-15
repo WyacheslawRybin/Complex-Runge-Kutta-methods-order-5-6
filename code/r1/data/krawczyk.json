@@ -78,5 +78,35 @@
   "F_enclosure": 3.7405678455418496e-85,
   "cond_square": 16903.929036812784,
   "seconds": 2
+ },
+ "CCK6-casc[6]+c6": {
+  "conditions": 38,
+  "unknowns": 41,
+  "fixed": [
+   4,
+   10,
+   40
+  ],
+  "proved": false,
+  "box_radius": 1e-50,
+  "K_radius": 7.302303298310637e-09,
+  "F_enclosure": 3.2970865744223395e-85,
+  "cond_square": 1.318168399353928e+18,
+  "seconds": 6
+ },
+ "CCK6(5)[6]+c6": {
+  "conditions": 38,
+  "unknowns": 41,
+  "fixed": [
+   9,
+   22,
+   23
+  ],
+  "proved": false,
+  "box_radius": 1e-50,
+  "K_radius": 2.1863304591465327e-31,
+  "F_enclosure": 8.305505982832777e-33,
+  "cond_square": 9.441437831020751e+17,
+  "seconds": 6
  }
 }

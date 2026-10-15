@@ -1,0 +1,11 @@
+[    1s] Vern6(5) split exponential   tol 1e-15: err=4.22e-15 nfev=2506
+[    1s] Vern6(5) split Rossler       tol 1e-15: err=3.29e-14 nfev=4170
+[    1s] Vern6(5) split VanderPol     tol 1e-15: err=1.14e-14 nfev=6106
+[    1s] Vern6(5) split nonautonomous tol 1e-15: err=2.31e-14 nfev=6978
+[    1s] Vern6(5) split Bouali        tol 1e-15: err=1.82e-13 nfev=7650
+[    2s] Vern6(5) split RigidBody     tol 1e-15: err=2.98e-14 nfev=6810
+[    2s] Vern6(5) split Kepler        tol 1e-15: err=6.41e-13 nfev=18626
+[    3s] Vern6(5) split Brusselator   tol 1e-15: err=2.72e-15 nfev=21786
+[    3s] Vern6(5) split Lorenz5       tol 1e-15: err=7.61e-12 nfev=38770
+[    4s] Vern6(5) split Arenstorf     tol 1e-15: err=2.45e-09 nfev=35962
+wrote r1\data\adaptive_vern6split_r1.json

@@ -1,0 +1,25 @@
+note: critical path of Brusselator depends on r: {((1, 2), (2, 3)), ((2, 1), (2, 3))}
+note: critical path of Bruss2D depends on r: {((1, 3), (2, 4)), ((2, 1), (2, 3)), ((1, 4), (2, 3))}
+problem      real f (m, a, path)   complex f (m, a, path)   kappa_lat s=6 for r = 0.25, 0.5, 1   | s=5
+VanderPol      2   2 (2, 2)       7   6 (2, 4)     1.167  1.278  1.417   | 1.160  1.267  1.400
+Rossler        2   4 (1, 2)       6   8 (1, 3)     1.152  1.238  1.333   | 1.145  1.229  1.320
+Bouali         6   3 (2, 1)      17   9 (2, 3)     1.179  1.312  1.500   | 1.171  1.300  1.480
+Lorenz5        4   4 (1, 2)      12  11 (1, 3)     1.152  1.238  1.333   | 1.145  1.229  1.320
+RigidBody      4   0 (2, 0)      14   6 (2, 1)     1.128  1.238  1.417   | 1.123  1.229  1.400
+Brusselator    4   3 (2, 1)      11   8 (2, 3)     1.179  1.312  1.500   | 1.171  1.300  1.480
+Bruss2D        7  12 (2, 1)      17  26 (2, 3)     1.179  1.185  1.417   | 1.171  1.178  1.400
+
+best complex / best real at kappa = 1, and times kappa_lat (r = 0.25, 1):
+  fixed    order 5 1e-06: Vander 1.43/1.66/2.00  Rossle 1.54/1.77/2.04  Bouali 0.80/0.94/1.19  Lorenz 3.80/4.36/5.02  RigidB 1.61/1.80/2.25  Brusse 1.41/1.65/2.08  Bruss2 1.14/1.34/1.60
+  fixed    order 5 1e-08: Vander 1.56/1.80/2.18  Rossle 1.91/2.19/2.52  Bouali 0.94/1.10/1.39  Lorenz 4.42/5.06/5.84  RigidB 1.77/1.99/2.48  Brusse 1.51/1.77/2.23  Bruss2 1.42/1.67/1.99
+  fixed    order 5 1e-10: Vander 1.94/2.25/2.71  Rossle 2.49/2.85/3.29  Bouali 1.13/1.32/1.67  Lorenz 5.33/6.11/7.04  RigidB 1.87/2.10/2.62  Brusse 1.66/1.94/2.46  Bruss2 1.59/1.86/2.23
+  fixed    order 6 1e-06: Vander 1.34/1.56/1.89  Rossle 1.27/1.47/1.70  Bouali 0.79/0.93/1.19  Lorenz 0.97/1.12/1.30  RigidB 0.99/1.12/1.41  Brusse 1.07/1.26/1.60  Bruss2 0.99/1.16/1.40
+  fixed    order 6 1e-08: Vander 1.10/1.29/1.56  Rossle 1.60/1.85/2.14  Bouali 1.05/1.23/1.57  Lorenz 0.79/0.91/1.05  RigidB 0.94/1.06/1.34  Brusse 1.20/1.42/1.80  Bruss2 1.25/1.48/1.78
+  fixed    order 6 1e-10: Vander 1.26/1.47/1.78  Rossle 1.77/2.04/2.36  Bouali 0.95/1.11/1.42  Lorenz 0.93/1.07/1.24  RigidB 1.03/1.16/1.46  Brusse 1.29/1.52/1.93  Bruss2 1.43/1.69/2.03
+  adaptive order 5 1e-06: Vander 1.17/1.36/1.64  Rossle 1.61/1.85/2.13  Bouali 2.24/2.62/3.31  Lorenz 2.19/2.50/2.89  RigidB 1.20/1.35/1.68  Brusse 1.35/1.59/2.00  Bruss2 1.16/1.36/1.63
+  adaptive order 5 1e-08: Vander 1.32/1.54/1.85  Rossle 2.01/2.30/2.65  Bouali 2.66/3.11/3.93  Lorenz 2.62/3.00/3.46  RigidB 1.43/1.60/2.00  Brusse 1.38/1.62/2.04  Bruss2 1.36/1.59/1.90
+  adaptive order 5 1e-10: Vander 1.64/1.91/2.30  Rossle 2.26/2.59/2.99  Bouali 2.94/3.44/4.35  Lorenz 2.71/3.10/3.58  RigidB 1.97/2.21/2.76  Brusse 1.30/1.52/1.92  Bruss2 1.50/1.76/2.10
+  adaptive order 6 1e-06: Vander 0.85/0.99/1.20  Rossle 1.30/1.50/1.73  Bouali 0.83/0.98/1.25  Lorenz 1.05/1.20/1.40  RigidB 0.78/0.89/1.11  Brusse 0.82/0.96/1.23  Bruss2 1.08/1.27/1.52
+  adaptive order 6 1e-08: Vander 0.81/0.94/1.14  Rossle 1.48/1.70/1.97  Bouali 0.84/0.99/1.26  Lorenz 1.15/1.32/1.53  RigidB 0.72/0.81/1.02  Brusse 1.05/1.23/1.57  Bruss2 1.21/1.43/1.72
+  adaptive order 6 1e-10: Vander 0.89/1.03/1.26  Rossle 1.78/2.05/2.38  Bouali 1.31/1.55/1.97  Lorenz 1.34/1.55/1.79  RigidB 0.86/0.97/1.21  Brusse 1.50/1.76/2.24  Bruss2 1.15/1.36/1.63
+wrote tables/latency.tex and r1\data\latency_r1.json

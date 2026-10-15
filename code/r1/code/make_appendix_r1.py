@@ -44,38 +44,34 @@ def main():
                 rf"${MA.tex(t['refine_shift'])}$. {extra}")
 
     out = []
+    # Appendix A keeps the tableaux of the comparisons and the verified pair; CRK5-s, CRK5-1, CRK5-2, GJM5
+    # (refined), CRK6-0, CRK6-s, CRK6-lambda and CCK6(5)-s are in data/tableaux.json of the repository
+    # (internal review 5)
+    V = json.load(open(os.path.join(R.DATA, "cck6v_r1.json")))
+    T.update(V)
+    r64 = json.load(open(os.path.join(R.DATA, "real64_r1.json")))["RK6-opt(4)"]
     out.append(block("CRK5-opt", T["CRK5-opt"], r"CRK5-opt --- minimum of $E_6$ under $\max|\text{coef}|\le5$ (this work)",
                      note("CRK5-opt"), extra_b=(r"\hat b", E["CRK5(4)"]["bh"])))
     out.append(r"The weights $\hat b$ give the embedded fourth-order formula of the pair CRK5(4) (Section~\ref{sec:embedded}).")
-    out.append(block("CRK5-s", T["CRK5-s"], "CRK5-s --- five-stage tableau with small coefficients (this work)",
-                     note("CRK5-s")))
-    out.append(block("CRK5-1", T["CRK5-1"], "CRK5-1 --- additional tableau of the CRK5 family (this work)", note("CRK5-1")))
-    out.append(block("CRK5-2", T["CRK5-2"], "CRK5-2 --- additional tableau of the CRK5 family (this work)", note("CRK5-2",
-                     r"The computed tableau had $\Imag b_1=0.5730233156598692$, which is inert (Proposition~\ref{prop:inert}) and is set to zero here.")))
-    out.append(block("GJM5", T["GJM5"], r"GJM5 --- tableau of \cite[Table~4]{GJM}, refined", note("GJM5",
-                     r"As published: $\Imag b_1=0.047034144968353016$ (inert), 16 significant digits.")))
-    out.append(block("CRK6-0", T["CRK6-0"], "CRK6-0 --- additional tableau of the CRK6 family (this work)", note("CRK6-0",
-                     r"Computed with 16 significant digits and $\Imag b_1=-0.2404222140778199$ (inert, set to zero here).")))
     out.append(block("CRK6-opt", T["CRK6-opt"], r"CRK6-opt --- minimum of $E_7$ under $\max|\text{coef}|\le5$ (this work)",
                      note("CRK6-opt"), extra_b=(r"\hat b", E["CRK6(4)"]["bh"])))
     out.append(r"The weights $\hat b$ give the embedded fourth-order formula of the pair CRK6(4) (Section~\ref{sec:embedded}).")
-    out.append(block("CRK6-s", T["CRK6-s"], "CRK6-s --- six-stage tableau with small coefficients (this work)",
-                     note("CRK6-s")))
-    out.append(block("CRK6-lam", T["CRK6-lam"], r"CRK6-$\lambda$ --- tableau of the CRK6 family with real $c_2$ (this work)", note("CRK6-lam",
-                     r"Here $c_2$ is real, so $\Imag b_2$ is inert as well (Proposition~\ref{prop:inert}) and is set to zero.")))
     out.append(block("CCK6(5)", T["CCK6(5)"], "CCK6(5) --- complex Cash--Karp pair (this work)", note("CCK6(5)"),
                      wlabels=["6", "5"]))
-    out.append(block("CCK6(5)-s", T["CCK6(5)-s"], "CCK6(5)-s --- complex Cash--Karp pair, small coefficients (this work)",
-                     note("CCK6(5)-s"), wlabels=["6", "5"]))
+    out.append(block("CCK6(5)-v", T["CCK6(5)-v"], "CCK6(5)-v --- complex Cash--Karp pair with a proof of existence (this work)",
+                     note("CCK6(5)-v", r"An exact pair exists within $10^{-50}$ of these coefficients (Proposition~\ref{prop:pairexist}); $c_6$ is real."),
+                     wlabels=["6", "5"]))
     out.append(block("CCK6-casc", T["CCK6-casc"], "CCK6-cascade --- complex Cash--Karp cascade 6(5)(4)(3)(2)(1) (this work)",
                      note("CCK6-casc"), wlabels=["6", "5", "4", "3", "2", "1"]))
     out.append(block("RK6-opt", T["RK6-opt"], "RK6-opt --- error-optimized real seven-stage tableau of order six (this work)",
-                     note("RK6-opt", "All coefficients are real.")))
+                     note("RK6-opt", "All coefficients are real."), extra_b=(r"\hat b", [[v, "0"] for v in r64["bh"]])))
+    out.append(r"The weights $\hat b$ give the embedded fourth-order formula of the real pair RK6-opt(4); $\hat b_8$ is the "
+               r"weight of the FSAL stage $k_8=f(t_{n+1},y_{n+1})$ (Section~\ref{sec:embedded}).")
     # a long align* cannot break across pages, so the end of a block ran into the footer (review, Section 6);
     # \allowdisplaybreaks is local to the {\small ...} group of each block
     text = "\n".join(out) + "\n"
     key = "{\\small\n\\begin{align*}"
-    assert text.count(key) == 13, text.count(key)
+    assert text.count(key) == 6, text.count(key)
     text = text.replace(key, "{\\small\\allowdisplaybreaks\n\\begin{align*}")
     open(os.path.join(R.TAB, "appendix_tableaux.tex"), "w", encoding="utf-8").write(text)
     print("ok", sum(len(x) for x in out))

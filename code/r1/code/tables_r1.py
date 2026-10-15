@@ -128,9 +128,12 @@ def table_tableaux():
 
 def table_pairs():
     E = json.load(open(os.path.join(r1patch.MERGED, "embedded.json")))
+    # RK6-opt(4): real FSAL pair 6(4) on the seven stages of RK6-opt (real64_r1.py)
+    r64 = json.load(open(os.path.join(R.DATA, "real64_r1.json")))["RK6-opt(4)"]
+    E["RK6-opt(4)"] = {k: r64[k] for k in ("Ahat", "B", "C", "E", "maxbh")}
     rows = [("CRK5(4)", 5, 4, 5), ("CRK6(4)", 6, 4, 6), ("CCK6(5)", 6, 5, 6), ("CCK6(5)-s", 6, 5, 6),
             ("CCK6-casc", 6, 5, 6), ("DP5", 6, 4, 7), ("CK5", 6, 4, 6), ("Tsit5(4)", 6, 4, 7), ("BS5(4)", 7, 4, 8),
-            ("DP6(5)", 8, 5, 8), ("Verner6(5)", 8, 5, 8), ("Vern6(5)", 8, 5, 9)]
+            ("RK6-opt(4)", 7, 4, 8), ("DP6(5)", 8, 5, 8), ("Verner6(5)", 8, 5, 8), ("Vern6(5)", 8, 5, 9)]
     lines = []
     for k, ev, q, s in rows:
         d = E[k]
